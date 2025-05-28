@@ -1,0 +1,5 @@
+pandas>=1.3.0
+openpyxl>=3.0.7
+tkcalendar>=1.6.1
+pdfkit>=1.0.0
+Jinja2>=3.0.1

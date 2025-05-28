@@ -1,0 +1,16 @@
+{
+    "app_name": "Clinic Receptionist",
+    "company_name": "My Doctor Clinic",
+    "data_path": "./data",
+    "excel_file": "patients.xlsx",
+    "backup_interval_days": 7,
+    "auto_backup": true,
+    "date_format": "%Y-%m-%d",
+    "time_format": "%H:%M",
+    "receipt_template": "default_template.html",
+    "printer_name": "",
+    "logo_path": "./src/resources/logo.png",
+    "appointment_duration_mins": 30,
+    "doctors": [],
+    "theme": "default"
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ clinic_name }} - Reception Slip</title>
+    <style>
+        @page {
+            size: A5;
+            margin: 10mm;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: 12pt;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #0066cc;
+            padding-bottom: 15px;
+        }
+        .header h1 {
+            font-size: 22pt;
+            color: #0066cc;
+            margin: 10px 0;
+            font-weight: 600;
+        }
+        .header .logo {
+            max-width: 180px;
+            max-height: 70px;
+            margin-bottom: 10px;
+        }
+        .header p {
+            margin: 5px 0;
+            font-size: 11pt;
+            color: #555;
+        }
+        .content {
+            margin: 20px 0;
+        }
+        .content h2 {
+            font-size: 16pt;
+            color: #0066cc;
+            margin: 15px 0;
+            text-align: center;
+            font-weight: 500;
+        }
+        .patient-info, .appointment-info {
+            margin-bottom: 20px;
+            background-color: #f5f9ff;
+            border-radius: 6px;
+            padding: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table td {
+            padding: 8px 5px;
+        }
+        .label {
+            font-weight: 600;
+            width: 40%;
+            color: #444;
+        }
+        .footer {
+            margin-top: 25px;
+            text-align: center;
+            font-size: 10pt;
+            color: #777;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+        .barcode {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .instructions {
+            font-size: 10pt;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+            background-color: #fafafa;
+        }
+        .instructions ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+        .instructions li {
+            margin-bottom: 5px;
+        }
+        .section-title {
+            font-weight: 600;
+            color: #0066cc;
+            margin-bottom: 10px;
+            font-size: 13pt;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            {% if logo_path %}
+            <img src="{{ logo_path }}" alt="{{ clinic_name }} Logo" class="logo">
+            {% endif %}
+            <h1>{{ clinic_name }}</h1>
+            <p>{{ clinic_address }}</p>
+            <p>Tel: {{ clinic_phone }}</p>
+        </div>
+        
+        <div class="content">
+            <h2>Reception Slip</h2>
+            
+            <div class="section-title">Patient Information</div>
+            <div class="patient-info">
+                <table>
+                    <tr>
+                        <td class="label">Patient ID:</td>
+                        <td>{{ patient_id }}</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Name:</td>
+                        <td>{{ patient_name }}</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Phone:</td>
+                        <td>{{ phone_number }}</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="section-title">Appointment Details</div>
+            <div class="appointment-info">
+                <table>
+                    <tr>
+                        <td class="label">Doctor:</td>
+                        <td>{{ doctor_name }}</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Date:</td>
+                        <td>{{ appointment_date }}</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Time:</td>
+                        <td>{{ appointment_time }}</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Duration:</td>
+                        <td>{{ appointment_duration }} minutes</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Reason for Visit:</td>
+                        <td>{{ reason_for_visit }}</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Fees:</td>
+                        <td>{% if fees %}PKR {{ fees }}{% else %}Not specified{% endif %}</td>
+                    </tr>
+                </table>
+            </div>
+            
+            {% if barcode %}
+            <div class="barcode">
+                <img src="{{ barcode }}" alt="Patient Barcode">
+            </div>
+            {% endif %}
+            
+            <div class="instructions">
+                <div class="section-title">Important Notes</div>
+                <ul>
+                    <li>Please arrive 10 minutes before your appointment time.</li>
+                    <li>Bring any relevant medical records or test results.</li>
+                    <li>If you need to cancel or reschedule, please call at least 24 hours in advance.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Generated on {{ generated_date }} at {{ generated_time }}</p>
+            <p>Thank you for choosing {{ clinic_name }}</p>
+        </div>
+    </div>
+</body>
+</html>
