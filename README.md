@@ -125,10 +125,12 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
 ## 📸 Screenshots
+![WhatsApp Image 2025-05-28 a![WhatsApp Image 2025-05-28 at 04 00 32_6d0cd9de](https://github.com/user-attachments/assets/637623fb-b462-4bb2-9035-df6a0d0e76da)
+t 23 47 21_23256596](https://github.com/user-attachments/assets/3438ac39-c108-41ba-97ef-dc4d325a5445)
+![WhatsApp Image 2025-05-28 at 23 47 20_fed1bef0](https://github.com/user-attachments/assets/e65837c1-da90-476f-8129-0444c5c419e2)
 
-[Add screenshots of your application here]
