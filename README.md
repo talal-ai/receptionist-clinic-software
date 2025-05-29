@@ -113,12 +113,10 @@ To customize the reception slip template, edit the HTML template file in `src/re
 
 This software is open source and available under the MIT License.
 
-## 📞 Contact & Support
+## Support
 
 For any questions, issues, or feature requests:
 - Create an issue in the GitHub repository
-- Email: your.email@example.com (replace with your actual contact)
-
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
