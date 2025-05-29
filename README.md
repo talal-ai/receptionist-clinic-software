@@ -130,7 +130,8 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 5. Open a Pull Request
 
 ## 📸 Screenshots
-t 23 47 21_23256596](https://github.com/user-attachments/assets/3438ac39-c108-41ba-97ef-dc4d325a5445)
+
+![WhatsApp Image 2025-05-28 at 23 47 21_31463af6](https://github.com/user-attachments/assets/6ce3b733-9dc7-46b5-a59e-d45d2d4af3bf)
 
 ![WhatsApp Image 2025-05-28 at 23 47 20_fed1bef0](https://github.com/user-attachments/assets/e65837c1-da90-476f-8129-0444c5c419e2)
 
