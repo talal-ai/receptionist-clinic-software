@@ -49,14 +49,7 @@
         .content {
             margin: 20px 0;
         }
-        .content h2 {
-            font-size: 16pt;
-            color: #0066cc;
-            margin: 15px 0;
-            text-align: center;
-            font-weight: 500;
-        }
-        .patient-info, .appointment-info {
+        .patient-info {
             margin-bottom: 20px;
             background-color: #f5f9ff;
             border-radius: 6px;
@@ -82,31 +75,6 @@
             border-top: 1px solid #eee;
             padding-top: 15px;
         }
-        .barcode {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .instructions {
-            font-size: 10pt;
-            margin-top: 20px;
-            padding: 15px;
-            border-radius: 6px;
-            border: 1px solid #e0e0e0;
-            background-color: #fafafa;
-        }
-        .instructions ul {
-            padding-left: 20px;
-            margin: 10px 0;
-        }
-        .instructions li {
-            margin-bottom: 5px;
-        }
-        .section-title {
-            font-weight: 600;
-            color: #0066cc;
-            margin-bottom: 10px;
-            font-size: 13pt;
-        }
     </style>
 </head>
 <body>
@@ -115,54 +83,37 @@
             {% if logo_path %}
             <img src="{{ logo_path }}" alt="{{ clinic_name }} Logo" class="logo">
             {% endif %}
-            <h1>{{ clinic_name }}</h1>
+            <h1>Clinic Dr. Muhammad Sajid Sohail</h1>
             <p>{{ clinic_address }}</p>
             <p>Tel: {{ clinic_phone }}</p>
         </div>
         
         <div class="content">
-            <h2>Reception Slip</h2>
-            
-            <div class="section-title">Patient Information</div>
             <div class="patient-info">
                 <table>
                     <tr>
-                        <td class="label">Patient ID:</td>
-                        <td>{{ patient_id }}</td>
-                    </tr>
-                    <tr>
-                        <td class="label">Name:</td>
-                        <td>{{ patient_name }}</td>
-                    </tr>
-                    <tr>
-                        <td class="label">Phone:</td>
-                        <td>{{ phone_number }}</td>
-                    </tr>
-                </table>
-            </div>
-            
-            <div class="section-title">Appointment Details</div>
-            <div class="appointment-info">
-                <table>
-                    <tr>
-                        <td class="label">Doctor:</td>
-                        <td>{{ doctor_name }}</td>
+                        <td class="label">Token Number:</td>
+                        <td>{{ token_number }}</td>
                     </tr>
                     <tr>
                         <td class="label">Date:</td>
                         <td>{{ appointment_date }}</td>
                     </tr>
                     <tr>
-                        <td class="label">Time:</td>
+                        <td class="label">Patient Name:</td>
+                        <td>{{ patient_name }}</td>
+                    </tr>
+                    <tr>
+                        <td class="label">s/o, w/o, d/o:</td>
+                        <td>{{ guardian_relation }}</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Time Arrival:</td>
+                        <td>{{ arrival_time }}</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Checkup Time:</td>
                         <td>{{ appointment_time }}</td>
-                    </tr>
-                    <tr>
-                        <td class="label">Duration:</td>
-                        <td>{{ appointment_duration }} minutes</td>
-                    </tr>
-                    <tr>
-                        <td class="label">Reason for Visit:</td>
-                        <td>{{ reason_for_visit }}</td>
                     </tr>
                     <tr>
                         <td class="label">Fees:</td>
@@ -170,26 +121,11 @@
                     </tr>
                 </table>
             </div>
-            
-            {% if barcode %}
-            <div class="barcode">
-                <img src="{{ barcode }}" alt="Patient Barcode">
-            </div>
-            {% endif %}
-            
-            <div class="instructions">
-                <div class="section-title">Important Notes</div>
-                <ul>
-                    <li>Please arrive 10 minutes before your appointment time.</li>
-                    <li>Bring any relevant medical records or test results.</li>
-                    <li>If you need to cancel or reschedule, please call at least 24 hours in advance.</li>
-                </ul>
-            </div>
         </div>
         
         <div class="footer">
             <p>Generated on {{ generated_date }} at {{ generated_time }}</p>
-            <p>Thank you for choosing {{ clinic_name }}</p>
+            <p>Thank you for choosing the clinic</p>
         </div>
     </div>
 </body>

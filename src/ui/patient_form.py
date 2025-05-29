@@ -65,20 +65,35 @@ class PatientForm:
         self.patient_id_entry = ttk.Entry(self.frame, textvariable=self.patient_id_var, state='readonly')
         self.patient_id_entry.grid(row=row, column=1, sticky='ew', padx=5, pady=2)
         
+        # Token Number
+        ttk.Label(self.frame, text="Token Number:").grid(row=row, column=2, sticky='e', padx=5, pady=2)
+        self.token_number_var = tk.StringVar()
+        self.token_number_entry = ttk.Entry(self.frame, textvariable=self.token_number_var)
+        self.token_number_entry.grid(row=row, column=3, sticky='ew', padx=5, pady=2)
+        
         # First Name
-        ttk.Label(self.frame, text="First Name:").grid(row=row, column=2, sticky='e', padx=5, pady=2)
+        row += 1
+        ttk.Label(self.frame, text="First Name:").grid(row=row, column=0, sticky='e', padx=5, pady=2)
         self.first_name_var = tk.StringVar()
         self.first_name_entry = ttk.Entry(self.frame, textvariable=self.first_name_var)
-        self.first_name_entry.grid(row=row, column=3, sticky='ew', padx=5, pady=2)
+        self.first_name_entry.grid(row=row, column=1, sticky='ew', padx=5, pady=2)
         
         # Last Name
         row += 1
-        ttk.Label(self.frame, text="Last Name:").grid(row=row, column=0, sticky='e', padx=5, pady=2)
+        ttk.Label(self.frame, text="Last Name:").grid(row=row, column=2, sticky='e', padx=5, pady=2)
         self.last_name_var = tk.StringVar()
         self.last_name_entry = ttk.Entry(self.frame, textvariable=self.last_name_var)
-        self.last_name_entry.grid(row=row, column=1, sticky='ew', padx=5, pady=2)
+        self.last_name_entry.grid(row=row, column=3, sticky='ew', padx=5, pady=2)
+        
+        # Guardian Relation
+        row += 1
+        ttk.Label(self.frame, text="Guardian Relation:").grid(row=row, column=0, sticky='e', padx=5, pady=2)
+        self.guardian_relation_var = tk.StringVar()
+        self.guardian_relation_entry = ttk.Entry(self.frame, textvariable=self.guardian_relation_var)
+        self.guardian_relation_entry.grid(row=row, column=1, sticky='ew', padx=5, pady=2)
         
         # Phone Number
+        row += 1
         ttk.Label(self.frame, text="Phone Number:").grid(row=row, column=2, sticky='e', padx=5, pady=2)
         self.phone_number_var = tk.StringVar()
         self.phone_number_entry = ttk.Entry(self.frame, textvariable=self.phone_number_var)
@@ -150,10 +165,10 @@ class PatientForm:
         )
         self.appointment_date_entry.grid(row=row, column=3, sticky='ew', padx=5, pady=2)
         
-        # Appointment Time
+        # Arrival Time
         row += 1
-        ttk.Label(self.frame, text="Time:").grid(row=row, column=0, sticky='e', padx=5, pady=2)
-        self.appointment_time_var = tk.StringVar()
+        ttk.Label(self.frame, text="Arrival Time:").grid(row=row, column=0, sticky='e', padx=5, pady=2)
+        self.arrival_time_var = tk.StringVar()
         
         # Create time options in 30-minute intervals with AM/PM format only
         time_options = []
@@ -192,22 +207,37 @@ class PatientForm:
             hour_ampm = f"{now.hour-12} PM"
             
         formatted_time = f"{hour_ampm}:{minutes:02d}"
+        self.arrival_time_var.set(formatted_time)
+        
+        # Create combobox for arrival time selection
+        self.arrival_time_entry = ttk.Combobox(
+            self.frame, 
+            textvariable=self.arrival_time_var,
+            values=time_options,
+            state="readonly"
+        )
+        self.arrival_time_entry.grid(row=row, column=1, sticky='ew', padx=5, pady=2)
+        
+        # Checkup Time
+        ttk.Label(self.frame, text="Checkup Time:").grid(row=row, column=2, sticky='e', padx=5, pady=2)
+        self.appointment_time_var = tk.StringVar()
         self.appointment_time_var.set(formatted_time)
         
-        # Create combobox for time selection
+        # Create combobox for checkup time selection
         self.appointment_time_entry = ttk.Combobox(
             self.frame, 
             textvariable=self.appointment_time_var,
             values=time_options,
             state="readonly"
         )
-        self.appointment_time_entry.grid(row=row, column=1, sticky='ew', padx=5, pady=2)
+        self.appointment_time_entry.grid(row=row, column=3, sticky='ew', padx=5, pady=2)
         
         # Add binding to move focus to next field when time is selected
         self.appointment_time_entry.bind("<<ComboboxSelected>>", self._on_time_selected)
         
         # Appointment Duration
-        ttk.Label(self.frame, text="Duration (mins):").grid(row=row, column=2, sticky='e', padx=5, pady=2)
+        row += 1
+        ttk.Label(self.frame, text="Duration (mins):").grid(row=row, column=0, sticky='e', padx=5, pady=2)
         self.appointment_duration_var = tk.StringVar()
         self.appointment_duration_var.set(str(self.settings.get("appointment_duration_mins", 30)))
         self.appointment_duration_entry = ttk.Spinbox(
@@ -217,21 +247,21 @@ class PatientForm:
             increment=5,
             textvariable=self.appointment_duration_var
         )
-        self.appointment_duration_entry.grid(row=row, column=3, sticky='ew', padx=5, pady=2)
+        self.appointment_duration_entry.grid(row=row, column=1, sticky='ew', padx=5, pady=2)
         
         # Fees
         row += 1
-        ttk.Label(self.frame, text="Fees:").grid(row=row, column=0, sticky='e', padx=5, pady=2)
+        ttk.Label(self.frame, text="Fees:").grid(row=row, column=2, sticky='e', padx=5, pady=2)
         self.fees_var = tk.StringVar()
         self.fees_entry = ttk.Entry(self.frame, textvariable=self.fees_var)
-        self.fees_entry.grid(row=row, column=1, sticky='ew', padx=5, pady=2)
+        self.fees_entry.grid(row=row, column=3, sticky='ew', padx=5, pady=2)
         
         # Reason for Visit
         row += 1
-        ttk.Label(self.frame, text="Reason for Visit:").grid(row=row, column=2, sticky='e', padx=5, pady=2)
+        ttk.Label(self.frame, text="Reason for Visit:").grid(row=row, column=0, sticky='e', padx=5, pady=2)
         self.reason_for_visit_var = tk.StringVar()
         self.reason_for_visit_entry = ttk.Entry(self.frame, textvariable=self.reason_for_visit_var)
-        self.reason_for_visit_entry.grid(row=row, column=3, sticky='ew', padx=5, pady=2)
+        self.reason_for_visit_entry.grid(row=row, column=1, columnspan=3, sticky='ew', padx=5, pady=2)
         
         # Notes Section
         row += 1
@@ -305,7 +335,7 @@ class PatientForm:
                 self.email_entry.focus()
     
     def _on_time_selected(self, event):
-        """Handle time selection from combobox"""
+        """Handle checkup time selection from combobox"""
         # Move focus to the appointment duration field
         self.appointment_duration_entry.focus()
     
@@ -313,8 +343,10 @@ class PatientForm:
         """Clear the form"""
         # Clear all form fields
         self.patient_id_var.set("")
+        self.token_number_var.set("")
         self.first_name_var.set("")
         self.last_name_var.set("")
+        self.guardian_relation_var.set("")
         self.phone_number_var.set("")
         self.email_var.set("")
         self.address_var.set("")
@@ -344,7 +376,8 @@ class PatientForm:
             hour_ampm = f"{now.hour-12} PM"
             
         formatted_time = f"{hour_ampm}:{minutes:02d}"
-        self.appointment_time_var.set(formatted_time)
+        self.appointment_time_var.set(formatted_time)  # Checkup time
+        self.arrival_time_var.set(formatted_time)
         
         self.appointment_duration_var.set(str(self.settings.get("appointment_duration_mins", 30)))
         self.fees_var.set("")
@@ -359,7 +392,7 @@ class PatientForm:
     
     def set_default_appointment(self, dt):
         """
-        Set default appointment date and time
+        Set default appointment date and checkup time
         
         Args:
             dt (datetime): Date and time
@@ -386,7 +419,7 @@ class PatientForm:
             hour_ampm = f"{dt.hour-12} PM"
             
         formatted_time = f"{hour_ampm}:{minutes:02d}"
-        self.appointment_time_var.set(formatted_time)
+        self.appointment_time_var.set(formatted_time)  # Checkup time
     
     def load_patient(self, patient_data):
         """
@@ -404,8 +437,10 @@ class PatientForm:
         
         # Load data into form fields
         self.patient_id_var.set(patient_data.get('patient_id', ''))
+        self.token_number_var.set(patient_data.get('token_number', ''))
         self.first_name_var.set(patient_data.get('first_name', ''))
         self.last_name_var.set(patient_data.get('last_name', ''))
+        self.guardian_relation_var.set(patient_data.get('guardian_relation', ''))
         self.phone_number_var.set(patient_data.get('phone_number', ''))
         self.email_var.set(patient_data.get('email', ''))
         self.address_var.set(patient_data.get('address', ''))
@@ -427,7 +462,7 @@ class PatientForm:
             # If no date, set to today
             self.appointment_date_entry.set_date(datetime.now())
         
-        # Set appointment time
+        # Set checkup time (stored as appointment_time)
         appointment_time = patient_data.get('appointment_time', '')
         if appointment_time:
             # Try to find the time in the dropdown values
@@ -487,7 +522,49 @@ class PatientForm:
                 hour_ampm = f"{now.hour-12} PM"
                 
             formatted_time = f"{hour_ampm}:{minutes:02d}"
-            self.appointment_time_var.set(formatted_time)
+            self.appointment_time_var.set(formatted_time)  # Set default checkup time
+        
+        # Set arrival time
+        arrival_time = patient_data.get('arrival_time', '')
+        if arrival_time:
+            # Try to find the time in the dropdown values
+            found = False
+            
+            # If it's in 24-hour format (HH:MM), convert to AM/PM
+            if ':' in arrival_time and len(arrival_time) <= 5:
+                try:
+                    hour, minute = map(int, arrival_time.split(':'))
+                    
+                    # Convert to AM/PM format
+                    if hour == 0:
+                        hour_ampm = "12 AM"
+                    elif hour < 12:
+                        hour_ampm = f"{hour} AM"
+                    elif hour == 12:
+                        hour_ampm = "12 PM"
+                    else:
+                        hour_ampm = f"{hour-12} PM"
+                        
+                    am_pm_time = f"{hour_ampm}:{minute:02d}"
+                    
+                    # Check if this time is in our dropdown options
+                    if am_pm_time in self.arrival_time_entry['values']:
+                        self.arrival_time_var.set(am_pm_time)
+                        found = True
+                except:
+                    pass
+            
+            # If not found yet, try direct match with dropdown values
+            if not found:
+                for option in self.arrival_time_entry['values']:
+                    if arrival_time in option:
+                        self.arrival_time_var.set(option)
+                        found = True
+                        break
+        
+        # If no valid arrival time was found or set, use the appointment time
+        if not arrival_time or not found:
+            self.arrival_time_var.set(self.appointment_time_var.get())
         
         self.appointment_duration_var.set(
             str(patient_data.get('appointment_duration', self.settings.get("appointment_duration_mins", 30)))
@@ -509,7 +586,7 @@ class PatientForm:
         # Get notes from text widget
         notes = self.notes_text.get(1.0, tk.END).strip()
         
-        # Convert AM/PM time format to 24-hour format for storage
+        # Convert AM/PM checkup time format to 24-hour format for storage
         appointment_time = self.appointment_time_var.get().strip()
         if appointment_time:
             try:
@@ -543,11 +620,47 @@ class PatientForm:
                 # If parsing fails, keep the original time
                 pass
         
+        # Convert AM/PM arrival time format to 24-hour format for storage
+        arrival_time = self.arrival_time_var.get().strip()
+        if arrival_time:
+            try:
+                # Parse the AM/PM time
+                time_parts = arrival_time.split(':')
+                if len(time_parts) == 2:
+                    hour_part = time_parts[0]
+                    minute_part = time_parts[1]
+                    
+                    # Handle hour conversion
+                    hour = 0
+                    if "AM" in hour_part:
+                        hour_str = hour_part.replace("AM", "").strip()
+                        hour = int(hour_str)
+                        # Convert 12 AM to 0
+                        if hour == 12:
+                            hour = 0
+                    elif "PM" in hour_part:
+                        hour_str = hour_part.replace("PM", "").strip()
+                        hour = int(hour_str)
+                        # Convert PM hours (except 12 PM)
+                        if hour != 12:
+                            hour += 12
+                    
+                    # Get minutes
+                    minute = int(minute_part)
+                    
+                    # Format as 24-hour time
+                    arrival_time = f"{hour:02d}:{minute:02d}"
+            except:
+                # If parsing fails, keep the original time
+                pass
+        
         # Build the form data
         form_data = {
             'patient_id': self.patient_id_var.get().strip(),
+            'token_number': self.token_number_var.get().strip(),
             'first_name': self.first_name_var.get().strip(),
             'last_name': self.last_name_var.get().strip(),
+            'guardian_relation': self.guardian_relation_var.get().strip(),
             'phone_number': self.phone_number_var.get().strip(),
             'email': self.email_var.get().strip(),
             'address': self.address_var.get().strip(),
@@ -556,6 +669,7 @@ class PatientForm:
             'doctor_name': self.doctor_name_var.get().strip(),
             'appointment_date': self.appointment_date_var.get().strip(),
             'appointment_time': appointment_time,
+            'arrival_time': arrival_time,
             'appointment_duration': self.appointment_duration_var.get().strip(),
             'fees': self.fees_var.get().strip(),
             'reason_for_visit': self.reason_for_visit_var.get().strip(),

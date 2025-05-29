@@ -23,8 +23,10 @@ class ExcelHandler:
     # Define the columns for the Excel file
     COLUMNS = [
         'patient_id', 
+        'token_number',
         'first_name', 
         'last_name', 
+        'guardian_relation',
         'address', 
         'city',
         'postal_code',
@@ -32,7 +34,8 @@ class ExcelHandler:
         'email',
         'doctor_name', 
         'appointment_date', 
-        'appointment_time', 
+        'appointment_time',  # This is used for checkup time
+        'arrival_time',
         'appointment_duration',
         'fees',
         'reason_for_visit',
@@ -231,6 +234,23 @@ class ExcelHandler:
                 now = datetime.now()
                 patient_data['patient_id'] = f"P{now.strftime('%Y%m%d%H%M%S')}"
             
+            # Generate sequential token number if not provided
+            if 'token_number' not in patient_data or not patient_data['token_number']:
+                # Find the current highest token number
+                if 'token_number' in df.columns and not df.empty:
+                    # Convert to numeric, ignoring errors (will convert non-numeric to NaN)
+                    df['token_number_numeric'] = pd.to_numeric(df['token_number'], errors='coerce')
+                    # Get the maximum, defaulting to 0 if all are NaN
+                    current_max = df['token_number_numeric'].max()
+                    # If max is NaN, start from 0
+                    if pd.isna(current_max):
+                        current_max = 0
+                    # Set the new token number
+                    patient_data['token_number'] = str(int(current_max) + 1)
+                else:
+                    # Start from 1 if no existing tokens
+                    patient_data['token_number'] = "1"
+            
             # Add timestamps
             now_str = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             patient_data['created_at'] = now_str
@@ -251,7 +271,7 @@ class ExcelHandler:
             
             # Save the updated DataFrame to Excel
             df.to_excel(self.excel_path, index=False)
-            logger.info(f"Added new patient: {patient_data['patient_id']}")
+            logger.info(f"Added new patient: {patient_data['patient_id']} with token number: {patient_data['token_number']}")
             
             return True
         except Exception as e:

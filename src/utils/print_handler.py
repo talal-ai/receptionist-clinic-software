@@ -234,18 +234,54 @@ class PrintHandler:
         template_name = self.settings.get('receipt_template', 'default_template.html')
         template = self.jinja_env.get_template(template_name)
         
+        # Convert 24-hour times to AM/PM format
+        appointment_time = patient_data.get('appointment_time', '')
+        arrival_time = patient_data.get('arrival_time', '')
+        
+        # Convert appointment time (checkup time) to AM/PM format if in 24-hour format
+        if appointment_time and ':' in appointment_time and len(appointment_time) <= 5:
+            try:
+                hour, minute = map(int, appointment_time.split(':'))
+                if hour == 0:
+                    appointment_time = f"12:{minute:02d} AM"
+                elif hour < 12:
+                    appointment_time = f"{hour}:{minute:02d} AM"
+                elif hour == 12:
+                    appointment_time = f"12:{minute:02d} PM"
+                else:
+                    appointment_time = f"{hour-12}:{minute:02d} PM"
+            except:
+                pass  # Keep original if conversion fails
+        
+        # Convert arrival time to AM/PM format if in 24-hour format
+        if arrival_time and ':' in arrival_time and len(arrival_time) <= 5:
+            try:
+                hour, minute = map(int, arrival_time.split(':'))
+                if hour == 0:
+                    arrival_time = f"12:{minute:02d} AM"
+                elif hour < 12:
+                    arrival_time = f"{hour}:{minute:02d} AM"
+                elif hour == 12:
+                    arrival_time = f"12:{minute:02d} PM"
+                else:
+                    arrival_time = f"{hour-12}:{minute:02d} PM"
+            except:
+                pass  # Keep original if conversion fails
+        
         # Prepare the data for the template
         template_data = {
-            'clinic_name': self.settings.get('company_name', 'Doctor Clinic'),
-            'clinic_address': self.settings.get('clinic_address', '123 Medical St, Health City'),
-            'clinic_phone': self.settings.get('clinic_phone', '123-456-7890'),
+            'clinic_name': self.settings.get('company_name', ''),
+            'clinic_address': self.settings.get('clinic_address', ''),
+            'clinic_phone': self.settings.get('clinic_phone', ''),
             'logo_path': self.settings.get('logo_path', ''),
-            'patient_id': patient_data.get('patient_id', ''),
+            'token_number': patient_data.get('token_number', ''),
             'patient_name': f"{patient_data.get('first_name', '')} {patient_data.get('last_name', '')}",
+            'guardian_relation': patient_data.get('guardian_relation', ''),
             'phone_number': patient_data.get('phone_number', ''),
             'doctor_name': patient_data.get('doctor_name', ''),
             'appointment_date': patient_data.get('appointment_date', ''),
-            'appointment_time': patient_data.get('appointment_time', ''),
+            'appointment_time': appointment_time,  # This is the checkup time in AM/PM format
+            'arrival_time': arrival_time,  # Now in AM/PM format
             'appointment_duration': patient_data.get('appointment_duration', 
                                                   self.settings.get('appointment_duration_mins', 30)),
             'fees': patient_data.get('fees', ''),

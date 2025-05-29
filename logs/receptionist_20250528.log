@@ -271,3 +271,129 @@ If this file exists please check that this process can read it or you can pass p
 2025-05-28 04:04:59,161 - receptionist.main_window - INFO - Updated stats bar
 2025-05-28 04:05:05,154 - receptionist.stats_view - INFO - Updated all statistics
 2025-05-28 04:05:14,249 - receptionist - INFO - Receptionist Application shutting down
+2025-05-28 21:15:53,014 - receptionist - INFO - Starting Receptionist Application
+2025-05-28 21:15:53,062 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-05-28 21:15:57,563 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-05-28 21:15:57,797 - receptionist.main_window - INFO - Updated stats bar
+2025-05-28 21:16:27,719 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmpzgmcm32e.html (PDF fallback)
+2025-05-28 21:16:28,272 - receptionist.print_handler - INFO - Opened file for printing: C:\Users\heyyt\AppData\Local\Temp\tmpzgmcm32e.html
+2025-05-28 21:16:36,233 - receptionist.stats_view - INFO - Updated all statistics
+2025-05-28 21:17:14,867 - receptionist - INFO - Receptionist Application shutting down
+2025-05-28 23:04:14,806 - receptionist - INFO - Starting Receptionist Application
+2025-05-28 23:04:14,808 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-05-28 23:04:16,349 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-05-28 23:04:16,614 - receptionist.main_window - INFO - Updated stats bar
+2025-05-28 23:04:22,248 - receptionist.print_handler - INFO - Printing reception slip for patient:  P20250528015547
+2025-05-28 23:04:22,248 - receptionist.print_handler - ERROR - Error generating HTML: name 'SettingsManager' is not defined
+2025-05-28 23:04:22,249 - receptionist.print_handler - ERROR - Error generating PDF: name 'SettingsManager' is not defined
+2025-05-28 23:04:22,249 - receptionist.print_handler - ERROR - Error generating HTML: name 'SettingsManager' is not defined
+2025-05-28 23:04:22,250 - receptionist.print_handler - ERROR - Error in HTML fallback: name 'SettingsManager' is not defined
+2025-05-28 23:04:22,295 - receptionist.print_handler - ERROR - Error printing reception slip: name 'SettingsManager' is not defined
+2025-05-28 23:04:22,296 - receptionist.print_handler - ERROR - Error generating HTML: name 'SettingsManager' is not defined
+2025-05-28 23:04:22,296 - receptionist.print_handler - ERROR - Error in emergency HTML fallback: name 'SettingsManager' is not defined
+2025-05-28 23:05:26,208 - receptionist - INFO - Starting Receptionist Application
+2025-05-28 23:05:26,209 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-05-28 23:05:27,017 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-05-28 23:05:27,275 - receptionist.main_window - INFO - Updated stats bar
+2025-05-28 23:05:33,954 - receptionist.print_handler - INFO - Printing reception slip for patient:  P20250528015547
+2025-05-28 23:05:33,954 - receptionist.print_handler - ERROR - Error generating HTML: name 'SettingsManager' is not defined
+2025-05-28 23:05:33,955 - receptionist.print_handler - ERROR - Error generating PDF: name 'SettingsManager' is not defined
+2025-05-28 23:05:33,978 - receptionist.print_handler - ERROR - Error generating HTML: name 'SettingsManager' is not defined
+2025-05-28 23:05:33,978 - receptionist.print_handler - ERROR - Error in HTML fallback: name 'SettingsManager' is not defined
+2025-05-28 23:05:33,979 - receptionist.print_handler - ERROR - Error printing reception slip: name 'SettingsManager' is not defined
+2025-05-28 23:05:33,980 - receptionist.print_handler - ERROR - Error generating HTML: name 'SettingsManager' is not defined
+2025-05-28 23:05:33,981 - receptionist.print_handler - ERROR - Error in emergency HTML fallback: name 'SettingsManager' is not defined
+2025-05-28 23:10:06,458 - receptionist - INFO - Starting Receptionist Application
+2025-05-28 23:10:06,459 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-05-28 23:10:08,117 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-05-28 23:10:08,595 - receptionist.main_window - INFO - Updated stats bar
+2025-05-28 23:10:44,881 - receptionist.print_handler - INFO - Printing reception slip for patient:  P20250528015547
+2025-05-28 23:10:44,960 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmpayisgju9.html (PDF fallback)
+2025-05-28 23:10:45,537 - receptionist.print_handler - INFO - Opened file for printing: C:\Users\heyyt\AppData\Local\Temp\tmpayisgju9.html
+2025-05-28 23:13:38,075 - receptionist - INFO - Starting Receptionist Application
+2025-05-28 23:13:38,077 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-05-28 23:13:39,298 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-05-28 23:13:39,624 - receptionist.main_window - INFO - Updated stats bar
+2025-05-28 23:13:47,385 - receptionist.print_handler - INFO - Printing reception slip for patient:  P20250528014508
+2025-05-28 23:13:47,398 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmpitnvfei2.html (PDF fallback)
+2025-05-28 23:13:47,665 - receptionist.print_handler - INFO - Opened file for printing: C:\Users\heyyt\AppData\Local\Temp\tmpitnvfei2.html
+2025-05-28 23:17:27,530 - receptionist - INFO - Starting Receptionist Application
+2025-05-28 23:17:27,531 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-05-28 23:17:28,483 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-05-28 23:17:28,979 - receptionist.main_window - INFO - Updated stats bar
+2025-05-28 23:17:57,043 - receptionist.print_handler - INFO - Printing reception slip for patient:  P20250528014508
+2025-05-28 23:17:57,055 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmpat4gpofr.html (PDF fallback)
+2025-05-28 23:17:57,416 - receptionist.print_handler - INFO - Opened file for printing: C:\Users\heyyt\AppData\Local\Temp\tmpat4gpofr.html
+2025-05-28 23:26:17,721 - receptionist - INFO - Receptionist Application shutting down
+2025-05-28 23:29:07,985 - receptionist - INFO - Starting Receptionist Application
+2025-05-28 23:29:07,987 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-05-28 23:29:09,362 - receptionist.excel_handler - INFO - Created backup at E:\$- Projects\Receprionist\data\backups\patients_backup_20250528_232909.xlsx
+2025-05-28 23:29:09,387 - receptionist.excel_handler - INFO - Removed old backup: E:\$- Projects\Receprionist\data\backups\patients_backup_20250528_030851.xlsx
+2025-05-28 23:29:09,612 - receptionist.excel_handler - INFO - Added missing columns to Excel file: {'token_number'}
+2025-05-28 23:29:09,942 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-05-28 23:29:10,815 - receptionist.main_window - INFO - Updated stats bar
+2025-05-28 23:29:26,583 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmpwipvqvdm.html (PDF fallback)
+2025-05-28 23:29:26,983 - receptionist.print_handler - INFO - Opened file for printing: C:\Users\heyyt\AppData\Local\Temp\tmpwipvqvdm.html
+2025-05-28 23:35:34,716 - receptionist - INFO - Starting Receptionist Application
+2025-05-28 23:35:34,717 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-05-28 23:35:35,310 - receptionist.excel_handler - INFO - Created backup at E:\$- Projects\Receprionist\data\backups\patients_backup_20250528_233535.xlsx
+2025-05-28 23:35:35,340 - receptionist.excel_handler - INFO - Removed old backup: E:\$- Projects\Receprionist\data\backups\patients_backup_20250528_031622.xlsx
+2025-05-28 23:35:35,439 - receptionist.excel_handler - INFO - Added missing columns to Excel file: {'arrival_time', 'guardian_relation'}
+2025-05-28 23:35:35,929 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-05-28 23:35:36,163 - receptionist.main_window - INFO - Updated stats bar
+2025-05-28 23:36:44,145 - receptionist.excel_handler - INFO - Created backup at E:\$- Projects\Receprionist\data\backups\patients_backup_20250528_233644.xlsx
+2025-05-28 23:36:44,147 - receptionist.excel_handler - INFO - Removed old backup: E:\$- Projects\Receprionist\data\backups\patients_backup_20250528_031701.xlsx
+2025-05-28 23:36:44,239 - receptionist.excel_handler - INFO - Added new patient: P20250528233644 with token number: 1
+2025-05-28 23:36:45,847 - receptionist.patient_form - INFO - Added new patient: P20250528233644
+2025-05-28 23:36:50,616 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmp44bhody5.html (PDF fallback)
+2025-05-28 23:36:50,949 - receptionist.print_handler - INFO - Opened file for printing: C:\Users\heyyt\AppData\Local\Temp\tmp44bhody5.html
+2025-05-28 23:37:18,302 - receptionist.excel_handler - INFO - Created backup at E:\$- Projects\Receprionist\data\backups\patients_backup_20250528_233718.xlsx
+2025-05-28 23:37:18,305 - receptionist.excel_handler - INFO - Removed old backup: E:\$- Projects\Receprionist\data\backups\patients_backup_20250528_033036.xlsx
+2025-05-28 23:37:18,362 - receptionist.excel_handler - INFO - Updated patient: P20250528233644
+2025-05-28 23:37:20,595 - receptionist.patient_form - INFO - Updated patient: P20250528233644
+2025-05-28 23:41:00,587 - receptionist - INFO - Starting Receptionist Application
+2025-05-28 23:41:00,588 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-05-28 23:41:01,347 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-05-28 23:41:01,599 - receptionist.main_window - INFO - Updated stats bar
+2025-05-28 23:41:33,300 - receptionist.excel_handler - INFO - Created backup at E:\$- Projects\Receprionist\data\backups\patients_backup_20250528_234133.xlsx
+2025-05-28 23:41:33,344 - receptionist.excel_handler - INFO - Removed old backup: E:\$- Projects\Receprionist\data\backups\patients_backup_20250528_033736.xlsx
+2025-05-28 23:41:33,399 - receptionist.excel_handler - INFO - Updated patient: P20250528014508
+2025-05-28 23:41:34,881 - receptionist.patient_form - INFO - Updated patient: P20250528014508
+2025-05-28 23:41:48,414 - receptionist.excel_handler - INFO - Created backup at E:\$- Projects\Receprionist\data\backups\patients_backup_20250528_234148.xlsx
+2025-05-28 23:41:48,416 - receptionist.excel_handler - INFO - Removed old backup: E:\$- Projects\Receprionist\data\backups\patients_backup_20250528_033754.xlsx
+2025-05-28 23:41:48,457 - receptionist.excel_handler - INFO - Updated patient: P20250528233644
+2025-05-28 23:41:50,098 - receptionist.patient_form - INFO - Updated patient: P20250528233644
+2025-05-28 23:41:59,301 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmp49do117q.html (PDF fallback)
+2025-05-28 23:41:59,650 - receptionist.print_handler - INFO - Opened file for printing: C:\Users\heyyt\AppData\Local\Temp\tmp49do117q.html
+2025-05-28 23:44:41,629 - receptionist - INFO - Starting Receptionist Application
+2025-05-28 23:44:41,632 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-05-28 23:44:42,595 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-05-28 23:44:42,941 - receptionist.main_window - INFO - Updated stats bar
+2025-05-28 23:44:57,276 - receptionist.excel_handler - INFO - Created backup at E:\$- Projects\Receprionist\data\backups\patients_backup_20250528_234457.xlsx
+2025-05-28 23:44:57,278 - receptionist.excel_handler - INFO - Removed old backup: E:\$- Projects\Receprionist\data\backups\patients_backup_20250528_034201.xlsx
+2025-05-28 23:44:57,401 - receptionist.excel_handler - INFO - Updated patient: P20250528233644
+2025-05-28 23:44:59,970 - receptionist.patient_form - INFO - Updated patient: P20250528233644
+2025-05-28 23:45:01,323 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmp9sy0vmml.html (PDF fallback)
+2025-05-28 23:45:01,631 - receptionist.print_handler - INFO - Opened file for printing: C:\Users\heyyt\AppData\Local\Temp\tmp9sy0vmml.html
+2025-05-29 00:01:07,342 - receptionist.main_window - INFO - Updated stats bar
+2025-05-29 00:01:07,627 - receptionist.main_window - INFO - Updated stats bar
+2025-05-29 00:01:07,908 - receptionist.main_window - INFO - Updated stats bar
+2025-05-29 00:01:08,168 - receptionist.main_window - INFO - Updated stats bar
+2025-05-29 00:01:08,443 - receptionist.main_window - INFO - Updated stats bar
+2025-05-29 00:01:08,785 - receptionist.main_window - INFO - Updated stats bar
+2025-05-29 00:01:09,113 - receptionist.main_window - INFO - Updated stats bar
+2025-05-29 00:01:11,963 - receptionist.main_window - INFO - Updated stats bar
+2025-05-29 00:01:12,881 - receptionist.main_window - INFO - Updated stats bar
+2025-05-29 00:01:13,138 - receptionist.main_window - INFO - Updated stats bar
+2025-05-29 00:01:13,369 - receptionist.main_window - INFO - Updated stats bar
+2025-05-29 00:01:13,526 - receptionist.main_window - INFO - Updated stats bar
+2025-05-29 00:01:13,823 - receptionist.main_window - INFO - Updated stats bar
+2025-05-29 00:01:20,866 - receptionist.excel_handler - INFO - Created backup at E:\$- Projects\Receprionist\data\backups\patients_backup_20250529_000120.xlsx
+2025-05-29 00:01:20,869 - receptionist.excel_handler - INFO - Removed old backup: E:\$- Projects\Receprionist\data\backups\patients_backup_20250528_034211.xlsx
+2025-05-29 00:01:20,986 - receptionist.excel_handler - INFO - Updated patient: P20250528033736
+2025-05-29 00:01:23,216 - receptionist.patient_form - INFO - Updated patient: P20250528033736
+2025-05-29 00:01:27,743 - receptionist.excel_handler - INFO - Created backup at E:\$- Projects\Receprionist\data\backups\patients_backup_20250529_000127.xlsx
+2025-05-29 00:01:27,746 - receptionist.excel_handler - INFO - Removed old backup: E:\$- Projects\Receprionist\data\backups\patients_backup_20250528_034729.xlsx
+2025-05-29 00:01:27,819 - receptionist.excel_handler - INFO - Updated patient: P20250528033736
+2025-05-29 00:01:29,677 - receptionist.patient_form - INFO - Updated patient: P20250528033736
+2025-05-29 00:15:28,025 - receptionist - INFO - Receptionist Application shutting down
