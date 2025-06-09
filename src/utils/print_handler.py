@@ -13,6 +13,7 @@ from pathlib import Path
 import webbrowser
 import jinja2
 import pdfkit
+import messagebox
 
 logger = logging.getLogger('receptionist.print_handler')
 
@@ -370,12 +371,69 @@ class PrintHandler:
             if printer_name is None:
                 printer_name = self.settings.get('printer_name', '')
             
-            # Print the PDF - this is platform dependent
-            # On Windows, you might use a command like:
-            # os.system(f'SumatraPDF.exe -print-to "{printer_name}" "{pdf_path}"')
+            # Check if we're using the Black Copper thermal printer
+            if self.settings.get('use_thermal_printer', False):
+                try:
+                    from escpos.printer import Usb
+                    
+                    # USB vendor and product IDs for BC-98AC (you may need to adjust these)
+                    VENDOR_ID = int(self.settings.get('printer_settings', {}).get('vendor_id', '0x0483'), 16)
+                    PRODUCT_ID = int(self.settings.get('printer_settings', {}).get('product_id', '0x5740'), 16)
+                    
+                    # Initialize the printer
+                    printer = Usb(VENDOR_ID, PRODUCT_ID)
+                    
+                    # Get template data
+                    html_content, template_data = self.generate_html(self._current_patient_data)
+                    
+                    # Format a professional thermal receipt
+                    # Center-align the header
+                    printer.set(align='center', font='a', width=2, height=2)
+                    printer.text(f"\n{template_data['clinic_name']}\n")
+                    printer.set(align='center', font='a', width=1, height=1)
+                    if template_data['clinic_address']:
+                        printer.text(f"{template_data['clinic_address']}\n")
+                    if template_data['clinic_phone']:
+                        printer.text(f"Tel: {template_data['clinic_phone']}\n")
+                    
+                    # Separator
+                    printer.text("\n" + "="*32 + "\n")
+                    
+                    # Title
+                    printer.set(align='center', font='a', width=1, height=1)
+                    printer.text("="*32 + "\n")
+                    printer.text(f"Patient: {template_data['patient_name']}\n")
+                    printer.text(f"ID: {template_data.get('patient_id', '')}\n")
+                    printer.text(f"Date: {template_data['appointment_date']}\n")
+                    printer.text(f"Time: {template_data['appointment_time']}\n")
+                    printer.text(f"Doctor: {template_data['doctor_name']}\n")
+                    printer.text("="*32 + "\n")
+                    printer.text(f"Generated: {template_data['generated_date']} {template_data['generated_time']}\n")
+                    
+                    # Cut the paper
+                    printer.cut()
+                    
+                    logger.info("Printed receipt using thermal printer")
+                    return True
+                    
+                except ImportError:
+                    logger.warning("python-escpos not installed. Please install with: pip install python-escpos")
+                    messagebox.showwarning(
+                        "Printer Setup Required",
+                        "Please install python-escpos package:\n\npip install python-escpos\n\nAnd configure your printer settings."
+                    )
+                except Exception as e:
+                    logger.error(f"Thermal printer error: {e}")
+                    messagebox.showerror(
+                        "Printer Error",
+                        f"Could not connect to thermal printer. Please check:\n"
+                        f"1. Printer is connected and powered on\n"
+                        f"2. USB permissions are correct\n"
+                        f"3. Vendor/Product IDs are correct\n\n"
+                        f"Error: {str(e)}"
+                    )
             
-            # For now, just open the PDF in the default viewer
-            # The user can print from there
+            # Fallback to default behavior - open in browser/PDF viewer
             webbrowser.open(pdf_path)
             logger.info(f"Opened file for printing: {pdf_path}")
             
@@ -395,6 +453,9 @@ class PrintHandler:
             bool: True if successful, False otherwise
         """
         try:
+            # Store the patient data for thermal printing
+            self._current_patient_data = patient_data
+            
             # Generate the PDF or HTML
             output_path = self.generate_pdf(patient_data)
             

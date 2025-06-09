@@ -1,0 +1,14 @@
+2025-06-10 01:37:01,052 - receptionist - INFO - Starting Receptionist Application
+2025-06-10 01:37:01,052 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-10 01:37:02,410 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-10 01:37:02,679 - receptionist.main_window - INFO - Updated stats bar
+2025-06-10 01:37:31,288 - receptionist.main_window - INFO - Updated stats bar
+2025-06-10 01:37:39,647 - receptionist.main_window - INFO - Updated stats bar
+2025-06-10 01:37:41,641 - receptionist.stats_view - INFO - Updated all statistics
+2025-06-10 01:37:55,100 - receptionist.stats_view - INFO - Updated all statistics
+2025-06-10 01:38:04,564 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmpdo8doo9u.html (PDF fallback)
+2025-06-10 01:38:04,767 - receptionist.print_handler - INFO - Opened file for printing: C:\Users\heyyt\AppData\Local\Temp\tmpdo8doo9u.html
+2025-06-10 01:38:34,530 - receptionist.stats_view - INFO - Updated all statistics
+2025-06-10 01:39:29,740 - receptionist.excel_handler - INFO - Created backup at E:\$- Projects\Receprionist\data\backups\patients_backup_20250610_013929.xlsx
+2025-06-10 01:39:29,742 - receptionist.excel_handler - INFO - Removed old backup: E:\$- Projects\Receprionist\data\backups\patients_backup_20250528_035550.xlsx
+2025-06-10 01:39:29,806 - receptionist.excel_handler - INFO - Deleted patient: P20250528014508

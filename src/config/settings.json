@@ -1,6 +1,8 @@
 {
     "app_name": "Clinic Receptionist",
-    "company_name": "My Doctor Clinic",
+    "company_name": "Your Clinic Name",
+    "clinic_address": "Your Clinic Address",
+    "clinic_phone": "Your Phone Number",
     "data_path": "./data",
     "excel_file": "patients.xlsx",
     "backup_interval_days": 7,
@@ -9,8 +11,15 @@
     "time_format": "%H:%M",
     "receipt_template": "default_template.html",
     "printer_name": "",
-    "logo_path": "./src/resources/logo.png",
+    "logo_path": "",
     "appointment_duration_mins": 30,
     "doctors": [],
-    "theme": "default"
+    "theme": "default",
+    "printer_settings": {
+        "use_thermal_printer": true,
+        "printer_name": "BC-98AC",
+        "vendor_id": "0x0483",
+        "product_id": "0x5740",
+        "interface": 0
+    }
 }
