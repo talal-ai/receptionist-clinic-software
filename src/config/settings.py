@@ -25,14 +25,14 @@ class Settings:
         "excel_file": "patients.xlsx",
         "backup_interval_days": 7,
         "auto_backup": True,
-        "date_format": "%Y-%m-%d",
+        "date_format": "%d-%m-%Y",
         "time_format": "%H:%M",
         "receipt_template": "default_template.html",
         "printer_name": "",  # Default printer
         "logo_path": "./src/resources/logo.png",
         "appointment_duration_mins": 30,
-        "default_doctor": "Dr. Mukarram Faiz (MBBS FCPS Medicine)",
-        "doctors": ["Dr. Mukarram Faiz (MBBS FCPS Medicine)"],
+        "default_doctor": "",
+        "doctors": [],
         "theme": "default"
     }
     

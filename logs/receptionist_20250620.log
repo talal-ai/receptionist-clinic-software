@@ -1,0 +1,296 @@
+2025-06-20 02:26:19,211 - receptionist - INFO - Starting Receptionist Application
+2025-06-20 02:26:19,212 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 02:26:20,516 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-20 02:26:20,846 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:30:57,711 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:30:58,791 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-20
+2025-06-20 02:31:01,250 - receptionist - INFO - Receptionist Application shutting down
+2025-06-20 02:31:07,626 - receptionist - INFO - Starting Receptionist Application
+2025-06-20 02:31:07,627 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 02:31:08,248 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-20 02:31:08,383 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:32:13,093 - receptionist.settings - INFO - Settings saved to E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 02:35:34,584 - receptionist - INFO - Receptionist Application shutting down
+2025-06-20 02:35:57,829 - receptionist - INFO - Starting Receptionist Application
+2025-06-20 02:35:57,830 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 02:35:58,319 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-20 02:35:58,451 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:37:32,115 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:37:32,620 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:37:32,791 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:37:32,970 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:37:33,135 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:37:33,370 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:37:40,198 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:37:57,027 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-20
+2025-06-20 02:38:00,390 - receptionist - INFO - Receptionist Application shutting down
+2025-06-20 02:38:07,172 - receptionist - INFO - Starting Receptionist Application
+2025-06-20 02:38:07,173 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 02:38:07,705 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-20 02:38:07,845 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:38:54,505 - receptionist - INFO - Receptionist Application shutting down
+2025-06-20 02:41:02,887 - receptionist - INFO - Starting Receptionist Application
+2025-06-20 02:41:02,889 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 02:41:03,630 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-20 02:41:03,777 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:43:48,536 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-20
+2025-06-20 02:43:50,567 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-20
+2025-06-20 02:43:51,284 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-20
+2025-06-20 02:43:54,983 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:43:56,307 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-20
+2025-06-20 02:43:57,984 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:43:59,479 - receptionist - INFO - Receptionist Application shutting down
+2025-06-20 02:44:03,586 - receptionist - INFO - Starting Receptionist Application
+2025-06-20 02:44:03,587 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 02:44:04,076 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-20 02:44:04,207 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:44:54,566 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-20
+2025-06-20 02:44:55,094 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-20
+2025-06-20 02:45:06,845 - receptionist - INFO - Starting Receptionist Application
+2025-06-20 02:45:06,846 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 02:45:07,350 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-20 02:45:07,492 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:45:47,173 - receptionist - INFO - Starting Receptionist Application
+2025-06-20 02:45:47,174 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 02:45:47,720 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-20 02:45:47,856 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:45:48,078 - receptionist - ERROR - An error occurred: 'PatientForm' object has no attribute 'doctor_name_var'
+Traceback (most recent call last):
+  File "E:\$- Projects\Receprionist\main.py", line 49, in main
+    app = MainWindow(settings)
+  File "E:\$- Projects\Receprionist\src\ui\main_window.py", line 46, in __init__
+    self._create_ui()
+    ~~~~~~~~~~~~~~~^^
+  File "E:\$- Projects\Receprionist\src\ui\main_window.py", line 97, in _create_ui
+    self.patient_form = PatientForm(self.main_frame, self.settings, self.patient_model,
+                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                   self._on_patient_saved, self._on_patient_printed)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\$- Projects\Receprionist\src\ui\patient_form.py", line 44, in __init__
+    self._create_ui()
+    ~~~~~~~~~~~~~~~^^
+  File "E:\$- Projects\Receprionist\src\ui\patient_form.py", line 96, in _create_ui
+    self.doctor_name_var.set("Dr. Muhammad Sajid Sohail")
+    ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PatientForm' object has no attribute 'doctor_name_var'. Did you mean: 'last_name_var'?
+2025-06-20 02:46:07,044 - receptionist - INFO - Starting Receptionist Application
+2025-06-20 02:46:07,045 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 02:46:07,577 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-20 02:46:07,707 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:46:15,574 - receptionist - INFO - Receptionist Application shutting down
+2025-06-20 02:46:41,831 - receptionist - INFO - Starting Receptionist Application
+2025-06-20 02:46:41,832 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 02:46:42,429 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-20 02:46:42,562 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:46:42,793 - receptionist - ERROR - An error occurred: name 'doctors' is not defined
+Traceback (most recent call last):
+  File "E:\$- Projects\Receprionist\main.py", line 49, in main
+    app = MainWindow(settings)
+  File "E:\$- Projects\Receprionist\src\ui\main_window.py", line 46, in __init__
+    self._create_ui()
+    ~~~~~~~~~~~~~~~^^
+  File "E:\$- Projects\Receprionist\src\ui\main_window.py", line 97, in _create_ui
+    self.patient_form = PatientForm(self.main_frame, self.settings, self.patient_model,
+                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                                   self._on_patient_saved, self._on_patient_printed)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\$- Projects\Receprionist\src\ui\patient_form.py", line 44, in __init__
+    self._create_ui()
+    ~~~~~~~~~~~~~~~^^
+  File "E:\$- Projects\Receprionist\src\ui\patient_form.py", line 100, in _create_ui
+    self.doctor_name_combo = ttk.Combobox(self.frame, textvariable=self.doctor_name_var, values=doctors)
+                                                                                                ^^^^^^^
+NameError: name 'doctors' is not defined
+2025-06-20 02:47:00,726 - receptionist - INFO - Starting Receptionist Application
+2025-06-20 02:47:00,727 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 02:47:01,328 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-20 02:47:01,461 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:47:40,892 - receptionist - INFO - Starting Receptionist Application
+2025-06-20 02:47:40,893 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 02:47:41,376 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-20 02:47:41,507 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:47:57,408 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-20
+2025-06-20 02:47:58,497 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-20
+2025-06-20 02:47:58,676 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-20
+2025-06-20 02:47:58,890 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-20
+2025-06-20 02:48:08,307 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:48:09,153 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:48:12,207 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:48:12,378 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:48:12,564 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:48:12,793 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:48:20,523 - receptionist - INFO - Receptionist Application shutting down
+2025-06-20 02:50:50,983 - receptionist - INFO - Starting Receptionist Application
+2025-06-20 02:50:50,984 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 02:50:51,636 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-20 02:50:51,770 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:50:56,922 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmphyu0gs5q.html (PDF fallback)
+2025-06-20 02:50:57,145 - receptionist.print_handler - INFO - Opened file for printing: C:\Users\heyyt\AppData\Local\Temp\tmphyu0gs5q.html
+2025-06-20 02:54:15,900 - receptionist - INFO - Starting Receptionist Application
+2025-06-20 02:54:15,901 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 02:54:16,407 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-20 02:54:16,541 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:54:22,402 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmpp9lmtba6.html (PDF fallback)
+2025-06-20 02:54:22,641 - receptionist.print_handler - INFO - Opened file for printing: C:\Users\heyyt\AppData\Local\Temp\tmpp9lmtba6.html
+2025-06-20 02:58:29,444 - receptionist - INFO - Receptionist Application shutting down
+2025-06-20 02:58:41,284 - receptionist - INFO - Starting Receptionist Application
+2025-06-20 02:58:41,285 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 02:58:41,803 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-20 02:58:41,938 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 02:58:48,022 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmp5nxtmh1p.html (PDF fallback)
+2025-06-20 02:58:48,236 - receptionist.print_handler - INFO - Opened file for printing: C:\Users\heyyt\AppData\Local\Temp\tmp5nxtmh1p.html
+2025-06-20 03:00:42,300 - receptionist - INFO - Starting Receptionist Application
+2025-06-20 03:00:42,301 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 03:00:42,784 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-20 03:00:42,913 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:00:47,959 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmpof6ei8xm.html (PDF fallback)
+2025-06-20 03:00:48,219 - receptionist.print_handler - INFO - Opened file for printing: C:\Users\heyyt\AppData\Local\Temp\tmpof6ei8xm.html
+2025-06-20 03:03:06,632 - receptionist - INFO - Receptionist Application shutting down
+2025-06-20 03:03:14,335 - receptionist - INFO - Starting Receptionist Application
+2025-06-20 03:03:14,336 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 03:03:14,827 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-20 03:03:14,970 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:03:31,485 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmpeeeufj4v.html (PDF fallback)
+2025-06-20 03:03:31,688 - receptionist.print_handler - INFO - Opened file for printing: C:\Users\heyyt\AppData\Local\Temp\tmpeeeufj4v.html
+2025-06-20 03:06:15,738 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmp16jgxayh.html (PDF fallback)
+2025-06-20 03:06:15,837 - receptionist.print_handler - INFO - Opened file for printing: C:\Users\heyyt\AppData\Local\Temp\tmp16jgxayh.html
+2025-06-20 03:09:26,515 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmp7s5za6u8.html (PDF fallback)
+2025-06-20 03:09:26,614 - receptionist.print_handler - INFO - Opened file for printing: C:\Users\heyyt\AppData\Local\Temp\tmp7s5za6u8.html
+2025-06-20 03:10:38,166 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:10:38,396 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:10:38,596 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:10:38,804 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:10:43,093 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:10:46,806 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmp0bpszrz6.html (PDF fallback)
+2025-06-20 03:10:46,893 - receptionist.print_handler - INFO - Opened file for printing: C:\Users\heyyt\AppData\Local\Temp\tmp0bpszrz6.html
+2025-06-20 03:11:58,039 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:12:00,544 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmphfegot0l.html (PDF fallback)
+2025-06-20 03:12:00,629 - receptionist.print_handler - INFO - Opened file for printing: C:\Users\heyyt\AppData\Local\Temp\tmphfegot0l.html
+2025-06-20 03:13:49,412 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:13:49,694 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-20
+2025-06-20 03:13:50,959 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:13:51,242 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-20
+2025-06-20 03:13:52,795 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:13:53,095 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-20
+2025-06-20 03:13:56,026 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmpryngcage.html (PDF fallback)
+2025-06-20 03:13:56,116 - receptionist.print_handler - INFO - Opened file for printing: C:\Users\heyyt\AppData\Local\Temp\tmpryngcage.html
+2025-06-20 03:15:27,544 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:15:30,288 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmpht8d06rc.html (PDF fallback)
+2025-06-20 03:15:30,390 - receptionist.print_handler - INFO - Opened file for printing: C:\Users\heyyt\AppData\Local\Temp\tmpht8d06rc.html
+2025-06-20 03:15:54,678 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:15:55,811 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:15:56,064 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-20
+2025-06-20 03:15:58,140 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmp8kgk971t.html (PDF fallback)
+2025-06-20 03:15:58,241 - receptionist.print_handler - INFO - Opened file for printing: C:\Users\heyyt\AppData\Local\Temp\tmp8kgk971t.html
+2025-06-20 03:16:55,395 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:16:55,620 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-20
+2025-06-20 03:16:58,390 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmpdhm2xspk.html (PDF fallback)
+2025-06-20 03:16:58,481 - receptionist.print_handler - INFO - Opened file for printing: C:\Users\heyyt\AppData\Local\Temp\tmpdhm2xspk.html
+2025-06-20 03:19:21,490 - receptionist - INFO - Receptionist Application shutting down
+2025-06-20 03:20:23,183 - receptionist - INFO - Starting Receptionist Application
+2025-06-20 03:20:23,184 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 03:20:23,683 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-20 03:20:23,810 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:20:35,245 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-20
+2025-06-20 03:22:34,146 - receptionist - INFO - Starting Receptionist Application
+2025-06-20 03:22:34,147 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 03:22:34,775 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-20 03:22:34,911 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:22:42,010 - receptionist - INFO - Receptionist Application shutting down
+2025-06-20 03:22:43,403 - receptionist - INFO - Receptionist Application shutting down
+2025-06-20 03:22:48,220 - receptionist - INFO - Starting Receptionist Application
+2025-06-20 03:22:48,221 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 03:22:48,866 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-20 03:22:48,999 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:26:42,061 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:26:44,438 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:26:45,957 - receptionist - INFO - Receptionist Application shutting down
+2025-06-20 03:26:51,234 - receptionist - INFO - Starting Receptionist Application
+2025-06-20 03:26:51,236 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 03:26:51,298 - receptionist.theme - INFO - Modern theme applied successfully
+2025-06-20 03:26:51,299 - receptionist.theme - INFO - Window style applied successfully
+2025-06-20 03:26:51,824 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-20 03:26:52,055 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:27:17,957 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:27:19,225 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-20
+2025-06-20 03:27:20,480 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:27:21,807 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:27:22,347 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-20
+2025-06-20 03:27:24,000 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-20
+2025-06-20 03:27:25,319 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:27:31,317 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:27:32,171 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-20
+2025-06-20 03:29:15,944 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:29:16,177 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-20
+2025-06-20 03:29:18,488 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:29:20,487 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:29:22,076 - receptionist - INFO - Receptionist Application shutting down
+2025-06-20 03:29:51,251 - receptionist - INFO - Starting Receptionist Application
+2025-06-20 03:29:51,253 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 03:29:51,319 - receptionist.theme - INFO - Modern theme applied successfully
+2025-06-20 03:29:51,320 - receptionist.theme - INFO - Window style applied successfully
+2025-06-20 03:29:51,973 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-20 03:29:52,172 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:31:40,622 - receptionist - INFO - Starting Receptionist Application
+2025-06-20 03:31:40,623 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 03:31:40,902 - receptionist.theme - INFO - Modern theme applied successfully
+2025-06-20 03:31:40,903 - receptionist.theme - INFO - Window style applied successfully
+2025-06-20 03:31:41,375 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-20 03:31:41,509 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:31:47,310 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-20
+2025-06-20 03:32:46,973 - receptionist - INFO - Starting Receptionist Application
+2025-06-20 03:32:46,974 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 03:32:47,034 - receptionist.theme - INFO - Modern theme applied successfully
+2025-06-20 03:32:47,035 - receptionist.theme - INFO - Window style applied successfully
+2025-06-20 03:32:47,562 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-20 03:32:47,691 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:34:16,569 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:34:17,296 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:34:18,051 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:34:34,167 - receptionist - INFO - Receptionist Application shutting down
+2025-06-20 03:34:38,307 - receptionist - INFO - Starting Receptionist Application
+2025-06-20 03:34:38,308 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 03:34:38,438 - receptionist.theme - INFO - Modern theme applied successfully
+2025-06-20 03:34:38,438 - receptionist.theme - INFO - Window style applied successfully
+2025-06-20 03:34:38,875 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-20 03:34:39,007 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:38:30,414 - receptionist - INFO - Receptionist Application shutting down
+2025-06-20 03:43:15,130 - receptionist - INFO - Starting Receptionist Application
+2025-06-20 03:43:15,131 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 03:43:15,213 - receptionist.theme - INFO - Modern theme applied successfully
+2025-06-20 03:43:15,235 - receptionist.theme - INFO - Window style applied successfully
+2025-06-20 03:43:15,781 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-20 03:43:15,928 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 03:43:22,201 - receptionist - INFO - Receptionist Application shutting down
+2025-06-20 04:05:30,976 - receptionist - INFO - Starting Receptionist Application
+2025-06-20 04:05:30,983 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 04:05:31,055 - receptionist.theme - INFO - Modern theme applied successfully
+2025-06-20 04:05:31,055 - receptionist.theme - INFO - Window style applied successfully
+2025-06-20 04:05:31,663 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-20 04:05:31,683 - receptionist - ERROR - An error occurred: unknown option "-font"
+Traceback (most recent call last):
+  File "E:\$- Projects\Receprionist\main.py", line 49, in main
+    app = MainWindow(settings)
+  File "E:\$- Projects\Receprionist\src\ui\main_window.py", line 54, in __init__
+    self._create_ui()
+    ~~~~~~~~~~~~~~~^^
+  File "E:\$- Projects\Receprionist\src\ui\main_window.py", line 96, in _create_ui
+    self._create_toolbar()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\$- Projects\Receprionist\src\ui\main_window.py", line 187, in _create_toolbar
+    new_patient_btn.configure(font=self.button_font)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\tkinter\__init__.py", line 1822, in configure
+    return self._configure('configure', cnf, kw)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\tkinter\__init__.py", line 1812, in _configure
+    self.tk.call(_flatten((self._w, cmd)) + self._options(cnf))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_tkinter.TclError: unknown option "-font"
+2025-06-20 04:06:28,489 - receptionist - INFO - Starting Receptionist Application
+2025-06-20 04:06:28,490 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-20 04:06:29,097 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-20 04:06:29,231 - receptionist.main_window - INFO - Updated stats bar
+2025-06-20 04:06:37,121 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmpao1ybd0k.html (PDF fallback)
+2025-06-20 04:06:37,483 - receptionist.print_handler - INFO - Opened file for printing: C:\Users\heyyt\AppData\Local\Temp\tmpao1ybd0k.html
+2025-06-20 04:07:20,676 - receptionist - INFO - Receptionist Application shutting down

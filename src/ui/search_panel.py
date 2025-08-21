@@ -32,6 +32,9 @@ class SearchPanel:
         
         # Create the UI
         self._create_ui()
+        
+        # Show all patients by default
+        self.show_all_patients()
     
     def _create_ui(self):
         """Create the user interface"""
@@ -42,7 +45,7 @@ class SearchPanel:
         self.frame.columnconfigure(0, weight=0)  # Label
         self.frame.columnconfigure(1, weight=1)  # Search entry
         self.frame.columnconfigure(2, weight=0)  # Search button
-        self.frame.columnconfigure(3, weight=0)  # Delete button
+        self.frame.columnconfigure(3, weight=0)  # Clear button
         
         # Search Row
         ttk.Label(self.frame, text="Search:").grid(row=0, column=0, sticky='e', padx=5, pady=5)
@@ -53,6 +56,9 @@ class SearchPanel:
         
         self.search_button = ttk.Button(self.frame, text="Search", command=self._on_search)
         self.search_button.grid(row=0, column=2, sticky='e', padx=5, pady=5)
+        
+        self.clear_button = ttk.Button(self.frame, text="Show All", command=self.show_all_patients)
+        self.clear_button.grid(row=0, column=3, sticky='e', padx=5, pady=5)
         
         # Bind Enter key to search
         self.search_entry.bind("<Return>", lambda event: self._on_search())
@@ -68,27 +74,29 @@ class SearchPanel:
         # Create the treeview for search results
         self.results_tree = ttk.Treeview(
             self.results_frame,
-            columns=("ID", "Name", "Phone", "Doctor", "Date", "Time", "Fees"),
+            columns=("ID", "Token", "Name", "Status", "Doctor", "Date", "Arrival", "Fees"),
             show="headings",
             height=5
         )
         
         # Define the columns
         self.results_tree.heading("ID", text="ID")
+        self.results_tree.heading("Token", text="Token")
         self.results_tree.heading("Name", text="Name")
-        self.results_tree.heading("Phone", text="Phone")
+        self.results_tree.heading("Status", text="Status")
         self.results_tree.heading("Doctor", text="Doctor")
         self.results_tree.heading("Date", text="Date")
-        self.results_tree.heading("Time", text="Time")
+        self.results_tree.heading("Arrival", text="Arrival")
         self.results_tree.heading("Fees", text="Fees")
         
         # Configure column widths
-        self.results_tree.column("ID", width=80)
+        self.results_tree.column("ID", width=50)
+        self.results_tree.column("Token", width=50)
         self.results_tree.column("Name", width=150)
-        self.results_tree.column("Phone", width=100)
-        self.results_tree.column("Doctor", width=100)
+        self.results_tree.column("Status", width=60)
+        self.results_tree.column("Doctor", width=120)
         self.results_tree.column("Date", width=80)
-        self.results_tree.column("Time", width=50)
+        self.results_tree.column("Arrival", width=60)
         self.results_tree.column("Fees", width=60)
         
         # Add a scrollbar
@@ -110,16 +118,16 @@ class SearchPanel:
         """Handle search button click"""
         search_text = self.search_var.get().strip()
         
-        if not search_text:
-            # Show all patients if search text is empty
-            self.show_all_patients()
-            return
-        
         # Search for patients by name
         results = self.patient_model.search_patients_by_name(search_text)
         
         # Display the results
         self._display_results(results)
+        
+        # Update the results label
+        if search_text:
+            if len(results) == 0:
+                messagebox.showinfo("Search Results", "No patients found matching your search.")
     
     def _on_result_selected(self, event):
         """
@@ -156,7 +164,7 @@ class SearchPanel:
         # Get the patient info from the selected item
         item = self.results_tree.item(selection[0])
         patient_id = item['values'][0]
-        patient_name = item['values'][1]
+        patient_name = item['values'][2]
         
         # Confirm deletion
         confirm = messagebox.askyesno(
@@ -202,17 +210,21 @@ class SearchPanel:
                 "end",
                 values=(
                     row.get('patient_id', ''),
+                    row.get('token_number', ''),
                     name,
-                    row.get('phone_number', ''),
+                    row.get('status', ''),
                     row.get('doctor_name', ''),
                     row.get('appointment_date', ''),
-                    row.get('appointment_time', ''),
+                    row.get('arrival_time', ''),
                     fees
                 )
             )
     
     def show_all_patients(self):
         """Show all patients in the search results"""
+        # Clear the search field
+        self.search_var.set("")
+        
         # Get all patients
         results = self.patient_model.get_all_patients()
         

@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ clinic_name }} - Reception Slip</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         @page {
             size: A5;
             margin: 10mm;
         }
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             font-size: 12pt;
@@ -25,26 +29,42 @@
             border-radius: 8px;
         }
         .header {
-            text-align: center;
             margin-bottom: 20px;
             border-bottom: 2px solid #0066cc;
             padding-bottom: 15px;
+            text-align: center;
         }
         .header h1 {
-            font-size: 22pt;
+            font-family: 'Poppins', sans-serif;
+            font-size: 20pt;
             color: #0066cc;
             margin: 10px 0;
             font-weight: 600;
+        }
+        .qualifications {
+            font-family: 'Poppins', sans-serif;
+            font-size: 12pt;
+            color: #444;
+            margin: 5px 0;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+        .contact-info {
+            font-family: 'Poppins', sans-serif;
+            font-size: 11pt;
+            color: #444;
+            margin: 8px 0;
+            line-height: 1.4;
+        }
+        .phone-numbers {
+            font-size: 10pt;
+            margin-top: 1px;
+            color: #555;
         }
         .header .logo {
             max-width: 180px;
             max-height: 70px;
             margin-bottom: 10px;
-        }
-        .header p {
-            margin: 5px 0;
-            font-size: 11pt;
-            color: #555;
         }
         .content {
             margin: 20px 0;
@@ -54,22 +74,27 @@
             background-color: #f5f9ff;
             border-radius: 6px;
             padding: 15px;
+            font-family: 'Poppins', sans-serif;
         }
         table {
             width: 100%;
             border-collapse: collapse;
+            font-family: 'Poppins', sans-serif;
         }
         table td {
             padding: 8px 5px;
+            font-family: 'Poppins', sans-serif;
         }
         .label {
-            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
             width: 40%;
             color: #444;
         }
         .footer {
             margin-top: 25px;
             text-align: center;
+            font-family: 'Poppins', sans-serif;
             font-size: 10pt;
             color: #777;
             border-top: 1px solid #eee;
@@ -80,12 +105,17 @@
 <body>
     <div class="container">
         <div class="header">
-            {% if logo_path %}
-            <img src="{{ logo_path }}" alt="{{ clinic_name }} Logo" class="logo">
-            {% endif %}
-            <h1>Clinic Dr. Muhammad Sajid Sohail</h1>
-            <p>{{ clinic_address }}</p>
-            <p>Tel: {{ clinic_phone }}</p>
+            <h1>Dr. Muhammad Sajid Sohail</h1>
+            <div class="qualifications">
+                Consultant Physician<br>
+                MBBS (K.E), FCPS (Medicine)
+            </div>
+            <div class="contact-info">
+                <div style="margin-top: 6px;" class="phone-numbers">
+                    Cell: 0300-5809938<br>
+                    Cell: 0347-9809938
+                </div>
+            </div>
         </div>
         
         <div class="content">
@@ -93,39 +123,45 @@
                 <table>
                     <tr>
                         <td class="label">Token Number:</td>
-                        <td>{{ token_number }}</td>
+                        <td style="font-family: 'Poppins', sans-serif;">{{ token_number }}</td>
                     </tr>
                     <tr>
                         <td class="label">Date:</td>
-                        <td>{{ appointment_date }}</td>
+                        <td style="font-family: 'Poppins', sans-serif;">{{ appointment_date }}</td>
                     </tr>
                     <tr>
                         <td class="label">Patient Name:</td>
-                        <td>{{ patient_name }}</td>
+                        <td style="font-family: 'Poppins', sans-serif;">{{ patient_name }}</td>
                     </tr>
                     <tr>
-                        <td class="label">s/o, w/o, d/o:</td>
-                        <td>{{ guardian_relation }}</td>
+                        <td class="label">Status:</td>
+                        <td style="font-family: 'Poppins', sans-serif;">{{ status }}</td>
                     </tr>
                     <tr>
                         <td class="label">Time Arrival:</td>
-                        <td>{{ arrival_time }}</td>
+                        <td style="font-family: 'Poppins', sans-serif;">{{ arrival_time }}</td>
                     </tr>
                     <tr>
                         <td class="label">Checkup Time:</td>
-                        <td>{{ appointment_time }}</td>
+                        <td style="font-family: 'Poppins', sans-serif;">{{ appointment_time }}</td>
                     </tr>
                     <tr>
                         <td class="label">Fees:</td>
-                        <td>{% if fees %}PKR {{ fees }}{% else %}Not specified{% endif %}</td>
+                        <td style="font-family: 'Poppins', sans-serif;">{% if fees %}PKR {{ fees }}{% else %}Not specified{% endif %}</td>
                     </tr>
+                    {% if remarks and remarks.strip() %}
+                    <tr>
+                        <td class="label">Remarks:</td>
+                        <td style="font-family: 'Poppins', sans-serif;">{{ remarks }}</td>
+                    </tr>
+                    {% endif %}
                 </table>
             </div>
         </div>
         
         <div class="footer">
             <p>Generated on {{ generated_date }} at {{ generated_time }}</p>
-            <p>Thank you for choosing the clinic</p>
+            <p>Thank you for trusting Dr. Sajid Sohail</p>
         </div>
     </div>
 </body>

@@ -12,6 +12,7 @@ A modern desktop application for efficiently managing patient appointments and p
 - 💾 Automatic data backup and recovery
 - 📊 Excel-based data storage for easy management
 - 🔒 Simple yet effective data security
+- 🖼️ Custom application logo support
 
 ## 🛠️ Technical Requirements
 
@@ -22,6 +23,7 @@ A modern desktop application for efficiently managing patient appointments and p
 - tkcalendar (calendar widget)
 - pdfkit (PDF generation)
 - Jinja2 (HTML templating)
+- Pillow (image processing and application logo)
 - wkhtmltopdf (optional, for enhanced PDF generation)
 
 ## 📋 Installation
@@ -97,17 +99,44 @@ You can modify the `settings.json` file (created after first run) to customize:
   - `ui/`: User interface components and screens
   - `utils/`: Utility functions and helper modules
   - `resources/`: Resources like templates, images, and assets
+    - `logo.png`: Application logo file (replace with your own)
+    - `templates/`: HTML templates for printing
 - `data/`: Data storage and backup files
 - `logs/`: Application logs for troubleshooting
 
 ## 🎨 Customization
 
+### Reception Slip Template
 To customize the reception slip template, edit the HTML template file in `src/resources/templates/default_template.html`. The template uses Jinja2 syntax and supports:
 
 - Custom clinic branding
 - Different layout options
 - QR codes for appointment verification
 - Barcode integration for patient identification
+
+### Application Logo
+To customize the application logo:
+
+1. Create your logo as a PNG image
+2. Name it `logo.png` and place it in the `src/resources/` directory
+3. For best results, use a high-resolution image (the application will automatically resize it)
+4. Restart the application to see your new logo
+
+## 🔧 Building a Standalone Executable
+
+To create a standalone executable for distribution:
+
+1. Make sure PyInstaller is installed:
+   ```
+   pip install pyinstaller
+   ```
+
+2. Run the build script:
+   ```
+   python build_standalone.py
+   ```
+
+3. The executable will be created in the `dist` folder as `Receptionist.exe`
 
 ## 📜 License
 

@@ -10,10 +10,13 @@ import logging
 import tkinter as tk
 from tkinter import ttk, messagebox
 from datetime import datetime, timedelta
+from PIL import Image, ImageTk  # Add PIL import for image handling
 
 from ui.patient_form import PatientForm
 from ui.appointment_view import AppointmentView
 from ui.search_panel import SearchPanel
+from ui.settings_dialog import SettingsDialog
+from ui.doctors_dialog import DoctorsDialog
 from models.patient_model import PatientModel
 
 logger = logging.getLogger('receptionist.main_window')
@@ -37,6 +40,48 @@ class MainWindow:
         self.root.geometry('1024x768')
         self.root.minsize(800, 600)
         
+        # Set application icon
+        try:
+            # Check if logo file exists in resources directory
+            logo_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'resources', 'logo.png')
+            if not os.path.exists(logo_path):
+                # Create resources directory if it doesn't exist
+                resources_dir = os.path.dirname(logo_path)
+                if not os.path.exists(resources_dir):
+                    os.makedirs(resources_dir)
+                logger.warning(f"Logo file not found at {logo_path}. Please add a logo.png file.")
+            else:
+                # Process and set the window icon using PIL for better resizing
+                try:
+                    # Open the image with PIL
+                    original_img = Image.open(logo_path)
+                    
+                    # Create appropriate icon sizes
+                    icon_sizes = [(16, 16), (32, 32), (48, 48), (64, 64), (128, 128)]
+                    icons = []
+                    
+                    for size in icon_sizes:
+                        # Resize with high-quality resampling
+                        resized_img = original_img.resize(size, Image.Resampling.LANCZOS)
+                        # Convert to PhotoImage
+                        photo_img = ImageTk.PhotoImage(resized_img)
+                        icons.append(photo_img)
+                    
+                    # Set multiple icons for the window (tkinter will choose the best one)
+                    self.root.iconphoto(True, *icons)
+                    
+                    # Keep a reference to prevent garbage collection
+                    self._icons = icons
+                    
+                    logger.info("Application logo set successfully with multiple sizes")
+                except ImportError:
+                    # Fallback if PIL is not available
+                    logo_img = tk.PhotoImage(file=logo_path)
+                    self.root.iconphoto(True, logo_img)
+                    logger.info("Application logo set with basic tkinter (PIL not available)")
+        except Exception as e:
+            logger.error(f"Failed to set application logo: {str(e)}")
+        
         # Create the patient model
         self.patient_model = PatientModel(settings)
         
@@ -45,6 +90,9 @@ class MainWindow:
         
         # Initialize data
         self._initialize_data()
+        
+        # Set up cleanup on window close
+        self.root.protocol("WM_DELETE_WINDOW", self._on_close)
     
     def _create_ui(self):
         """Create the user interface"""
@@ -316,9 +364,6 @@ class MainWindow:
         now = datetime.now()
         self.patient_form.set_default_appointment(now)
         
-        # Set default doctor
-        self.patient_form.doctor_name_var.set(self.settings.get("default_doctor", "Dr. Mukarram Faiz (MBBS FCPS Medicine)"))
-        
         # Update status
         self.status_message.config(text="New patient")
     
@@ -355,15 +400,49 @@ class MainWindow:
     
     def _on_settings(self):
         """Handle settings command"""
-        # This would open a settings dialog
-        # For now, just show a message
-        messagebox.showinfo("Settings", "Settings dialog not implemented yet.")
+        # Open the settings dialog
+        SettingsDialog(self.root, self.settings, self._on_settings_saved)
+    
+    def _on_settings_saved(self):
+        """Handle settings saved event"""
+        # Update window title
+        self.root.title(self.settings.get('app_name', 'Clinic Receptionist'))
+        
+        # Update database path label
+        db_path = self.settings.get_excel_path()
+        self.db_path_label.config(text=f"Database: {db_path}")
+        
+        # Refresh patient form if it exists
+        if hasattr(self, 'patient_form'):
+            # Update doctor list in the patient form
+            doctors = self.settings.get("doctors", [])
+            self.patient_form.doctor_name_combo['values'] = doctors
+            
+            # Update default appointment duration
+            self.patient_form.appointment_duration_var.set(
+                str(self.settings.get("appointment_duration_mins", 30))
+            )
+        
+        # Refresh data
+        self._on_refresh()
+        
+        # Update status
+        self.status_message.config(text="Settings updated")
     
     def _on_doctor_list(self):
         """Handle doctor list command"""
-        # This would open a doctor list dialog
-        # For now, just show a message
-        messagebox.showinfo("Doctor List", "Doctor list dialog not implemented yet.")
+        # Open the doctors dialog
+        DoctorsDialog(self.root, self.settings, self._on_doctors_saved)
+    
+    def _on_doctors_saved(self):
+        """Handle doctors saved event"""
+        # Update doctor list in the patient form if it exists
+        if hasattr(self, 'patient_form'):
+            doctors = self.settings.get("doctors", [])
+            self.patient_form.doctor_name_combo['values'] = doctors
+        
+        # Update status
+        self.status_message.config(text="Doctors list updated")
     
     def _on_about(self):
         """Handle about command"""
@@ -432,6 +511,15 @@ class MainWindow:
         
         # Update status
         self.status_message.config(text="Viewing statistics")
+    
+    def _on_close(self):
+        """Handle window close event"""
+        # Clean up resources
+        if hasattr(self, 'patient_form'):
+            self.patient_form.cleanup()
+        
+        # Close the window
+        self.root.destroy()
     
     def run(self):
         """Run the application"""

@@ -76,25 +76,27 @@ class AppointmentView:
         # Create the appointments treeview
         self.appointments_tree = ttk.Treeview(
             self.frame,
-            columns=("Time", "Patient", "Doctor", "Duration", "Fees", "Reason"),
+            columns=("Token", "Arrival", "Patient", "Status", "Doctor", "Fees", "Remarks"),
             show="headings"
         )
         
         # Define the columns
-        self.appointments_tree.heading("Time", text="Time")
+        self.appointments_tree.heading("Token", text="Token")
+        self.appointments_tree.heading("Arrival", text="Arrival")
         self.appointments_tree.heading("Patient", text="Patient")
+        self.appointments_tree.heading("Status", text="Status")
         self.appointments_tree.heading("Doctor", text="Doctor")
-        self.appointments_tree.heading("Duration", text="Duration")
         self.appointments_tree.heading("Fees", text="Fees")
-        self.appointments_tree.heading("Reason", text="Reason for Visit")
+        self.appointments_tree.heading("Remarks", text="Remarks")
         
         # Configure column widths
-        self.appointments_tree.column("Time", width=50)
+        self.appointments_tree.column("Token", width=50)
+        self.appointments_tree.column("Arrival", width=60)
         self.appointments_tree.column("Patient", width=150)
-        self.appointments_tree.column("Doctor", width=100)
-        self.appointments_tree.column("Duration", width=60)
+        self.appointments_tree.column("Status", width=60)
+        self.appointments_tree.column("Doctor", width=120)
         self.appointments_tree.column("Fees", width=60)
-        self.appointments_tree.column("Reason", width=150)
+        self.appointments_tree.column("Remarks", width=150)
         
         # Add a scrollbar
         scrollbar = ttk.Scrollbar(self.frame, orient="vertical", command=self.appointments_tree.yview)
@@ -168,7 +170,7 @@ class AppointmentView:
         
         if tags and len(tags) > 0:
             patient_id = tags[0]
-            patient_name = item['values'][1]  # Patient name is in the second column
+            patient_name = item['values'][2]  # Patient name is in the third column
             
             # Confirm deletion
             confirm = messagebox.askyesno(
@@ -193,12 +195,7 @@ class AppointmentView:
         self.show_appointments_for_date(self.current_date)
     
     def show_appointments_for_date(self, date):
-        """
-        Show appointments for a specific date
-        
-        Args:
-            date (str): Date in format YYYY-MM-DD
-        """
+        """Show all appointments for the given date."""
         # Update the current date
         self.current_date = date
         self.date_var.set(date)
@@ -218,11 +215,8 @@ class AppointmentView:
             # Get patient name
             patient_name = f"{appointment.get('first_name', '')} {appointment.get('last_name', '')}"
             
-            # Get appointment time
-            appointment_time = appointment.get('appointment_time', '')
-            
-            # Get appointment duration
-            appointment_duration = appointment.get('appointment_duration', '')
+            # Get arrival time
+            arrival_time = appointment.get('arrival_time', '')
             
             # Format fees
             fees = appointment.get('fees', '')
@@ -234,12 +228,16 @@ class AppointmentView:
                 "",
                 "end",
                 values=(
-                    appointment_time,
+                    appointment.get('token_number', ''),
+                    arrival_time,
                     patient_name,
+                    appointment.get('status', ''),
                     appointment.get('doctor_name', ''),
-                    f"{appointment_duration} min",
                     fees,
-                    appointment.get('reason_for_visit', '')
+                    appointment.get('remarks', appointment.get('notes', ''))
                 ),
                 tags=(appointment.get('patient_id', ''),)
             )
+
+    def delete_selected_patient(self):
+        """Delete the selected patient."""

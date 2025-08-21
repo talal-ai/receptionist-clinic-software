@@ -39,7 +39,7 @@ class ExcelHandler:
         'appointment_duration',
         'fees',
         'reason_for_visit',
-        'notes',
+        'remarks',
         'created_at',
         'updated_at'
     ]
@@ -236,20 +236,28 @@ class ExcelHandler:
             
             # Generate sequential token number if not provided
             if 'token_number' not in patient_data or not patient_data['token_number']:
-                # Find the current highest token number
-                if 'token_number' in df.columns and not df.empty:
+                # Get today's date
+                today = datetime.now().strftime('%Y-%m-%d')
+                
+                # Filter patients by today's date
+                today_patients = df[df['appointment_date'] == today] if not df.empty and 'appointment_date' in df.columns else pd.DataFrame()
+                
+                # Find the highest token number for today
+                if not today_patients.empty and 'token_number' in today_patients.columns:
                     # Convert to numeric, ignoring errors (will convert non-numeric to NaN)
-                    df['token_number_numeric'] = pd.to_numeric(df['token_number'], errors='coerce')
+                    today_patients['token_number_numeric'] = pd.to_numeric(today_patients['token_number'], errors='coerce')
                     # Get the maximum, defaulting to 0 if all are NaN
-                    current_max = df['token_number_numeric'].max()
+                    current_max = today_patients['token_number_numeric'].max()
                     # If max is NaN, start from 0
                     if pd.isna(current_max):
                         current_max = 0
                     # Set the new token number
                     patient_data['token_number'] = str(int(current_max) + 1)
                 else:
-                    # Start from 1 if no existing tokens
+                    # Start from 1 if no patients today
                     patient_data['token_number'] = "1"
+                
+                logger.info(f"Generated token number {patient_data['token_number']} for date {today}")
             
             # Add timestamps
             now_str = datetime.now().strftime('%Y-%m-%d %H:%M:%S')

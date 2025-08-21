@@ -1,0 +1,197 @@
+2025-06-24 00:10:25,024 - receptionist - INFO - Starting Receptionist Application
+2025-06-24 00:10:25,024 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-24 00:10:25,612 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-24 00:10:25,775 - receptionist.main_window - INFO - Updated stats bar
+2025-06-24 00:10:30,171 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-24
+2025-06-24 00:15:37,420 - receptionist - INFO - Receptionist Application shutting down
+2025-06-24 00:17:54,006 - receptionist - INFO - Starting Receptionist Application
+2025-06-24 00:17:54,007 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-24 00:17:54,515 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-24 00:17:54,657 - receptionist.main_window - INFO - Updated stats bar
+2025-06-24 00:18:00,598 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-24
+2025-06-24 00:18:27,785 - receptionist.excel_handler - INFO - Created backup at E:\$- Projects\Receprionist\data\backups\patients_backup_20250624_001827.xlsx
+2025-06-24 00:18:27,861 - receptionist.excel_handler - INFO - Removed old backup: E:\$- Projects\Receprionist\data\backups\patients_backup_20250528_233644.xlsx
+2025-06-24 00:18:27,919 - receptionist.excel_handler - INFO - Added new patient: P20250624001827 with token number: 1
+2025-06-24 00:18:29,356 - receptionist.patient_form - INFO - Added new patient: P20250624001827
+2025-06-24 00:18:29,438 - receptionist.patient_form - INFO - Set next token number to 2 for date 2025-06-24
+2025-06-24 00:18:37,648 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmp1212pmdy.html (PDF fallback)
+2025-06-24 00:18:37,879 - receptionist.print_handler - INFO - Opened HTML file for printing: C:\Users\heyyt\AppData\Local\Temp\tmp1212pmdy.html
+2025-06-24 00:18:48,738 - receptionist.patient_form - INFO - Set next token number to 2 for date 2025-06-24
+2025-06-24 00:19:02,928 - receptionist.excel_handler - INFO - Created backup at E:\$- Projects\Receprionist\data\backups\patients_backup_20250624_001902.xlsx
+2025-06-24 00:19:02,930 - receptionist.excel_handler - INFO - Removed old backup: E:\$- Projects\Receprionist\data\backups\patients_backup_20250528_233718.xlsx
+2025-06-24 00:19:02,956 - receptionist.excel_handler - INFO - Added new patient: P20250624001902 with token number: 2
+2025-06-24 00:19:04,428 - receptionist.patient_form - INFO - Added new patient: P20250624001902
+2025-06-24 00:19:04,483 - receptionist.patient_form - INFO - Set next token number to 3 for date 2025-06-24
+2025-06-24 00:19:18,766 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmpez4s7bgo.html (PDF fallback)
+2025-06-24 00:19:18,856 - receptionist.print_handler - INFO - Opened HTML file for printing: C:\Users\heyyt\AppData\Local\Temp\tmpez4s7bgo.html
+2025-06-24 00:19:40,619 - receptionist.patient_form - INFO - Set next token number to 3 for date 2025-06-24
+2025-06-24 00:22:09,554 - receptionist.excel_handler - INFO - Created backup at E:\$- Projects\Receprionist\data\backups\patients_backup_20250624_002209.xlsx
+2025-06-24 00:22:09,556 - receptionist.excel_handler - INFO - Removed old backup: E:\$- Projects\Receprionist\data\backups\patients_backup_20250528_234133.xlsx
+2025-06-24 00:22:09,597 - receptionist.excel_handler - INFO - Deleted patient: P20250528233644
+2025-06-24 00:22:15,064 - receptionist.excel_handler - INFO - Created backup at E:\$- Projects\Receprionist\data\backups\patients_backup_20250624_002215.xlsx
+2025-06-24 00:22:15,155 - receptionist.excel_handler - INFO - Removed old backup: E:\$- Projects\Receprionist\data\backups\patients_backup_20250528_234148.xlsx
+2025-06-24 00:22:15,187 - receptionist.excel_handler - INFO - Deleted patient: P20250528015547
+2025-06-24 00:25:52,265 - receptionist - INFO - Starting Receptionist Application
+2025-06-24 00:25:52,266 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-24 00:25:53,084 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-24 00:25:53,248 - receptionist.main_window - INFO - Updated stats bar
+2025-06-24 00:26:06,423 - receptionist.patient_form - INFO - Set next token number to 3 for date 2025-06-24
+2025-06-24 00:26:18,844 - receptionist.excel_handler - INFO - Created backup at E:\$- Projects\Receprionist\data\backups\patients_backup_20250624_002618.xlsx
+2025-06-24 00:26:18,845 - receptionist.excel_handler - INFO - Removed old backup: E:\$- Projects\Receprionist\data\backups\patients_backup_20250528_234457.xlsx
+2025-06-24 00:26:18,904 - receptionist.excel_handler - INFO - Added new patient: P20250624002618 with token number: 3
+2025-06-24 00:26:20,603 - receptionist.patient_form - INFO - Added new patient: P20250624002618
+2025-06-24 00:26:20,630 - receptionist.patient_form - ERROR - Error saving patient: unknown option "-values"
+2025-06-24 00:29:07,095 - receptionist - INFO - Receptionist Application shutting down
+2025-06-24 00:30:10,120 - receptionist - INFO - Starting Receptionist Application
+2025-06-24 00:30:10,121 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-24 00:30:10,648 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-24 00:30:10,789 - receptionist.main_window - INFO - Updated stats bar
+2025-06-24 00:31:02,203 - receptionist.patient_form - INFO - Set next token number to 4 for date 2025-06-24
+2025-06-24 00:31:10,642 - receptionist.excel_handler - INFO - Created backup at E:\$- Projects\Receprionist\data\backups\patients_backup_20250624_003110.xlsx
+2025-06-24 00:31:10,643 - receptionist.excel_handler - INFO - Removed old backup: E:\$- Projects\Receprionist\data\backups\patients_backup_20250529_000120.xlsx
+2025-06-24 00:31:10,675 - receptionist.excel_handler - INFO - Added new patient: P20250624003110 with token number: 4
+2025-06-24 00:31:12,188 - receptionist.patient_form - INFO - Added new patient: P20250624003110
+2025-06-24 00:31:12,244 - receptionist.patient_form - INFO - Set next token number to 5 for date 2025-06-24
+2025-06-24 00:31:15,770 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmpqncnz3eu.html (PDF fallback)
+2025-06-24 00:31:16,043 - receptionist.print_handler - INFO - Opened HTML file for printing: C:\Users\heyyt\AppData\Local\Temp\tmpqncnz3eu.html
+2025-06-24 00:43:49,036 - receptionist - INFO - Receptionist Application shutting down
+2025-06-24 00:44:15,882 - receptionist - INFO - Starting Receptionist Application
+2025-06-24 00:44:15,883 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-24 00:44:16,376 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-24 00:44:16,525 - receptionist.main_window - INFO - Updated stats bar
+2025-06-24 00:44:32,066 - receptionist - INFO - Receptionist Application shutting down
+2025-06-24 00:50:17,269 - receptionist - INFO - Starting Receptionist Application
+2025-06-24 00:50:17,271 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-24 00:50:17,876 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-24 00:50:18,027 - receptionist.main_window - INFO - Updated stats bar
+2025-06-24 00:50:18,037 - receptionist - ERROR - An error occurred: unknown option "-width"
+Traceback (most recent call last):
+  File "E:\$- Projects\Receprionist\main.py", line 49, in main
+    app = MainWindow(settings)
+  File "E:\$- Projects\Receprionist\src\ui\main_window.py", line 46, in __init__
+    self._create_ui()
+    ~~~~~~~~~~~~~~~^^
+  File "E:\$- Projects\Receprionist\src\ui\main_window.py", line 92, in _create_ui
+    self.search_panel = SearchPanel(self.left_panel, self.patient_model, self._on_patient_selected)
+                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\$- Projects\Receprionist\src\ui\search_panel.py", line 34, in __init__
+    self._create_ui()
+    ~~~~~~~~~~~~~~~^^
+  File "E:\$- Projects\Receprionist\src\ui\search_panel.py", line 87, in _create_ui
+    self.results_tree.heading("Phone", text="Phone", width=100)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\tkinter\ttk.py", line 1284, in heading
+    return _val_or_dict(self.tk, kw, self._w, 'heading', column)
+  File "C:\Python313\Lib\tkinter\ttk.py", line 288, in _val_or_dict
+    res = tk.call(*(args + options))
+_tkinter.TclError: unknown option "-width"
+2025-06-24 00:50:39,121 - receptionist - INFO - Starting Receptionist Application
+2025-06-24 00:50:39,122 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-24 00:50:39,589 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-24 00:50:39,729 - receptionist.main_window - INFO - Updated stats bar
+2025-06-24 00:50:39,738 - receptionist - ERROR - An error occurred: unknown option "-width"
+Traceback (most recent call last):
+  File "E:\$- Projects\Receprionist\main.py", line 49, in main
+    app = MainWindow(settings)
+  File "E:\$- Projects\Receprionist\src\ui\main_window.py", line 46, in __init__
+    self._create_ui()
+    ~~~~~~~~~~~~~~~^^
+  File "E:\$- Projects\Receprionist\src\ui\main_window.py", line 92, in _create_ui
+    self.search_panel = SearchPanel(self.left_panel, self.patient_model, self._on_patient_selected)
+                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\$- Projects\Receprionist\src\ui\search_panel.py", line 34, in __init__
+    self._create_ui()
+    ~~~~~~~~~~~~~~~^^
+  File "E:\$- Projects\Receprionist\src\ui\search_panel.py", line 87, in _create_ui
+    self.results_tree.heading("Phone", text="Phone", width=100)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\tkinter\ttk.py", line 1284, in heading
+    return _val_or_dict(self.tk, kw, self._w, 'heading', column)
+  File "C:\Python313\Lib\tkinter\ttk.py", line 288, in _val_or_dict
+    res = tk.call(*(args + options))
+_tkinter.TclError: unknown option "-width"
+2025-06-24 00:51:54,434 - receptionist - INFO - Starting Receptionist Application
+2025-06-24 00:51:54,435 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-24 00:51:54,909 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-24 00:51:55,070 - receptionist.main_window - INFO - Updated stats bar
+2025-06-24 01:02:34,061 - receptionist - INFO - Receptionist Application shutting down
+2025-06-24 01:02:38,702 - receptionist - INFO - Starting Receptionist Application
+2025-06-24 01:02:38,703 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-24 01:02:39,455 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-24 01:02:39,638 - receptionist.main_window - INFO - Updated stats bar
+2025-06-24 01:10:20,698 - receptionist.main_window - INFO - Updated stats bar
+2025-06-24 01:10:20,878 - receptionist.main_window - INFO - Updated stats bar
+2025-06-24 01:10:21,034 - receptionist.main_window - INFO - Updated stats bar
+2025-06-24 01:10:21,197 - receptionist.main_window - INFO - Updated stats bar
+2025-06-24 01:10:21,464 - receptionist.main_window - INFO - Updated stats bar
+2025-06-24 01:27:50,320 - receptionist - INFO - Starting Receptionist Application
+2025-06-24 01:27:50,321 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-24 01:27:50,714 - receptionist.excel_handler - INFO - Created backup at E:\$- Projects\Receprionist\data\backups\patients_backup_20250624_012750.xlsx
+2025-06-24 01:27:50,715 - receptionist.excel_handler - INFO - Removed old backup: E:\$- Projects\Receprionist\data\backups\patients_backup_20250529_000127.xlsx
+2025-06-24 01:27:50,784 - receptionist.excel_handler - INFO - Added missing columns to Excel file: {'remarks'}
+2025-06-24 01:27:50,898 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-24 01:27:51,070 - receptionist.main_window - INFO - Updated stats bar
+2025-06-24 01:30:29,624 - receptionist.excel_handler - INFO - Created backup at E:\$- Projects\Receprionist\data\backups\patients_backup_20250624_013029.xlsx
+2025-06-24 01:30:29,625 - receptionist.excel_handler - INFO - Removed old backup: E:\$- Projects\Receprionist\data\backups\patients_backup_20250610_013929.xlsx
+2025-06-24 01:30:29,677 - receptionist.excel_handler - INFO - Updated patient: P20250624003110
+2025-06-24 01:30:31,339 - receptionist.patient_form - INFO - Updated patient: P20250624003110
+2025-06-24 01:30:32,975 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmppyhjif51.html (PDF fallback)
+2025-06-24 01:30:33,193 - receptionist.print_handler - INFO - Opened HTML file for printing: C:\Users\heyyt\AppData\Local\Temp\tmppyhjif51.html
+2025-06-24 01:30:41,993 - receptionist.excel_handler - INFO - Created backup at E:\$- Projects\Receprionist\data\backups\patients_backup_20250624_013041.xlsx
+2025-06-24 01:30:41,994 - receptionist.excel_handler - INFO - Removed old backup: E:\$- Projects\Receprionist\data\backups\patients_backup_20250617_210455.xlsx
+2025-06-24 01:30:42,046 - receptionist.excel_handler - INFO - Updated patient: P20250624003110
+2025-06-24 01:30:43,738 - receptionist.patient_form - INFO - Updated patient: P20250624003110
+2025-06-24 01:30:45,023 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmpyg83zh_s.html (PDF fallback)
+2025-06-24 01:30:45,111 - receptionist.print_handler - INFO - Opened HTML file for printing: C:\Users\heyyt\AppData\Local\Temp\tmpyg83zh_s.html
+2025-06-24 01:34:26,843 - receptionist.main_window - INFO - Updated stats bar
+2025-06-24 01:34:30,597 - receptionist.stats_view - INFO - Updated all statistics
+2025-06-24 01:34:39,768 - receptionist.stats_view - INFO - Updated all statistics
+2025-06-24 01:34:43,785 - receptionist.main_window - INFO - Updated stats bar
+2025-06-24 01:34:44,580 - receptionist.main_window - INFO - Updated stats bar
+2025-06-24 01:34:50,089 - receptionist.stats_view - INFO - Updated all statistics
+2025-06-24 01:35:20,041 - receptionist.main_window - INFO - Updated stats bar
+2025-06-24 01:36:41,748 - receptionist.patient_form - INFO - Set next token number to 5 for date 2025-06-24
+2025-06-24 01:36:41,935 - receptionist.patient_form - INFO - Set next token number to 5 for date 2025-06-24
+2025-06-24 01:36:42,150 - receptionist.patient_form - INFO - Set next token number to 5 for date 2025-06-24
+2025-06-24 01:37:12,591 - receptionist.main_window - INFO - Updated stats bar
+2025-06-24 01:37:59,942 - receptionist.patient_form - INFO - Set next token number to 5 for date 2025-06-24
+2025-06-24 01:40:26,184 - receptionist - INFO - Receptionist Application shutting down
+2025-06-24 01:40:30,437 - receptionist - INFO - Starting Receptionist Application
+2025-06-24 01:40:30,439 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-24 01:40:30,919 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-24 01:40:31,075 - receptionist.main_window - INFO - Updated stats bar
+2025-06-24 01:40:39,372 - receptionist.excel_handler - INFO - Created backup at E:\$- Projects\Receprionist\data\backups\patients_backup_20250624_014039.xlsx
+2025-06-24 01:40:39,374 - receptionist.excel_handler - INFO - Removed old backup: E:\$- Projects\Receprionist\data\backups\patients_backup_20250617_210523.xlsx
+2025-06-24 01:40:39,410 - receptionist.excel_handler - INFO - Updated patient: P20250624003110
+2025-06-24 01:40:41,150 - receptionist.patient_form - INFO - Updated patient: P20250624003110
+2025-06-24 01:42:30,408 - receptionist - INFO - Starting Receptionist Application
+2025-06-24 01:42:30,409 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-24 01:42:30,914 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-24 01:42:31,061 - receptionist.main_window - INFO - Updated stats bar
+2025-06-24 01:42:41,612 - receptionist - INFO - Receptionist Application shutting down
+2025-06-24 01:51:38,346 - receptionist - INFO - Starting Receptionist Application
+2025-06-24 01:51:38,347 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-24 01:51:39,366 - receptionist.main_window - INFO - Application logo set successfully
+2025-06-24 01:51:39,951 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-24 01:51:40,096 - receptionist.main_window - INFO - Updated stats bar
+2025-06-24 01:51:50,541 - receptionist - INFO - Receptionist Application shutting down
+2025-06-24 01:53:53,963 - receptionist - INFO - Starting Receptionist Application
+2025-06-24 01:53:53,964 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-24 01:53:54,579 - receptionist.main_window - INFO - Application logo set successfully
+2025-06-24 01:53:55,014 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-24 01:53:55,153 - receptionist.main_window - INFO - Updated stats bar
+2025-06-24 01:53:59,378 - receptionist - INFO - Receptionist Application shutting down
+2025-06-24 01:55:31,908 - receptionist - INFO - Starting Receptionist Application
+2025-06-24 01:55:31,909 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-24 01:55:32,471 - receptionist.main_window - INFO - Application logo set successfully
+2025-06-24 01:55:32,909 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-24 01:55:33,137 - receptionist.main_window - INFO - Updated stats bar
+2025-06-24 01:55:37,153 - receptionist - INFO - Receptionist Application shutting down
+2025-06-24 01:57:10,533 - receptionist - INFO - Starting Receptionist Application
+2025-06-24 01:57:10,533 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-24 01:57:10,715 - receptionist.main_window - INFO - Application logo set successfully with multiple sizes
+2025-06-24 01:57:11,190 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-24 01:57:11,377 - receptionist.main_window - INFO - Updated stats bar
+2025-06-24 01:57:26,013 - receptionist.patient_form - INFO - Set next token number to 5 for date 2025-06-24
+2025-06-24 01:57:26,043 - receptionist.patient_form - INFO - Set next token number to 5 for date 2025-06-24
+2025-06-24 01:57:28,242 - receptionist - INFO - Receptionist Application shutting down

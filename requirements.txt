@@ -6,3 +6,5 @@ Jinja2>=3.0.1
 python-escpos>=2.2.0
 pyusb>=1.2.1
 wkhtmltopdf>=0.2
+pywin32>=305; sys_platform == 'win32'
+Pillow>=9.0.0

@@ -13,7 +13,7 @@ from pathlib import Path
 import webbrowser
 import jinja2
 import pdfkit
-import messagebox
+from tkinter import messagebox
 
 logger = logging.getLogger('receptionist.print_handler')
 
@@ -44,6 +44,9 @@ class PrintHandler:
             loader=jinja2.FileSystemLoader(self.template_dir),
             autoescape=True
         )
+        
+        # Add custom filter for date formatting
+        self.jinja_env.filters['format_date'] = self.format_date
         
         # Check if wkhtmltopdf is available
         try:
@@ -221,6 +224,38 @@ class PrintHandler:
 </html>''')
             logger.info(f"Created default template at {default_template_path}")
     
+    def format_date(self, date_str):
+        """
+        Format a date string to DD-MM-YYYY format
+        
+        Args:
+            date_str (str): Date string in any format
+            
+        Returns:
+            str: Formatted date string in DD-MM-YYYY format
+        """
+        try:
+            # Try to parse the date string
+            # First try ISO format (YYYY-MM-DD)
+            try:
+                date_obj = datetime.strptime(date_str, '%Y-%m-%d')
+            except ValueError:
+                # Then try other common formats
+                try:
+                    date_obj = datetime.strptime(date_str, '%d/%m/%Y')
+                except ValueError:
+                    try:
+                        date_obj = datetime.strptime(date_str, '%m/%d/%Y')
+                    except ValueError:
+                        # If all parsing attempts fail, return the original string
+                        return date_str
+            
+            # Format to DD-MM-YYYY
+            return date_obj.strftime('%d-%m-%Y')
+        except Exception:
+            # Return the original string if any error occurs
+            return date_str
+    
     def generate_html(self, patient_data):
         """
         Generate HTML content for a reception slip
@@ -269,6 +304,10 @@ class PrintHandler:
             except:
                 pass  # Keep original if conversion fails
         
+        # Format the appointment date to DD-MM-YY
+        appointment_date = patient_data.get('appointment_date', '')
+        appointment_date = self.format_date(appointment_date)
+        
         # Prepare the data for the template
         template_data = {
             'clinic_name': self.settings.get('company_name', ''),
@@ -277,18 +316,20 @@ class PrintHandler:
             'logo_path': self.settings.get('logo_path', ''),
             'token_number': patient_data.get('token_number', ''),
             'patient_name': f"{patient_data.get('first_name', '')} {patient_data.get('last_name', '')}",
+            'status': patient_data.get('status', 'New'),
             'guardian_relation': patient_data.get('guardian_relation', ''),
             'phone_number': patient_data.get('phone_number', ''),
             'doctor_name': patient_data.get('doctor_name', ''),
-            'appointment_date': patient_data.get('appointment_date', ''),
+            'appointment_date': appointment_date,
             'appointment_time': appointment_time,  # This is the checkup time in AM/PM format
             'arrival_time': arrival_time,  # Now in AM/PM format
             'appointment_duration': patient_data.get('appointment_duration', 
                                                   self.settings.get('appointment_duration_mins', 30)),
             'fees': patient_data.get('fees', ''),
             'reason_for_visit': patient_data.get('reason_for_visit', ''),
+            'remarks': patient_data.get('remarks', patient_data.get('notes', '')),  # Get remarks or fall back to notes
             'barcode': '',  # Can be implemented later if needed
-            'generated_date': datetime.now().strftime(self.settings.get('date_format', '%Y-%m-%d')),
+            'generated_date': self.format_date(datetime.now().strftime('%Y-%m-%d')),
             'generated_time': datetime.now().strftime(self.settings.get('time_format', '%H:%M'))
         }
         
@@ -433,11 +474,49 @@ class PrintHandler:
                         f"Error: {str(e)}"
                     )
             
-            # Fallback to default behavior - open in browser/PDF viewer
-            webbrowser.open(pdf_path)
-            logger.info(f"Opened file for printing: {pdf_path}")
-            
-            return True
+            # Direct printing to Windows default printer
+            try:
+                # Check if file is PDF
+                if pdf_path.lower().endswith('.pdf'):
+                    import win32api
+                    import win32print
+                    
+                    # Get default printer if none specified
+                    if not printer_name:
+                        printer_name = win32print.GetDefaultPrinter()
+                    
+                    # Print the PDF directly to the printer
+                    win32api.ShellExecute(
+                        0, 
+                        "print", 
+                        pdf_path,
+                        f'/d:"{printer_name}"' if printer_name else None,
+                        ".", 
+                        0
+                    )
+                    logger.info(f"Sent PDF to printer: {printer_name or 'Default'}")
+                    return True
+                else:
+                    # For HTML files, open in browser
+                    webbrowser.open(pdf_path)
+                    logger.info(f"Opened HTML file for printing: {pdf_path}")
+                    return True
+            except ImportError:
+                logger.warning("pywin32 not installed. Please install with: pip install pywin32")
+                messagebox.showwarning(
+                    "Printer Setup Required",
+                    "Please install pywin32 package for direct printing:\n\npip install pywin32"
+                )
+                # Fallback to browser
+                webbrowser.open(pdf_path)
+                return True
+            except Exception as e:
+                logger.error(f"Error sending to printer: {e}")
+                # Fallback to browser
+                webbrowser.open(pdf_path)
+                logger.info(f"Fallback: Opened file for printing: {pdf_path}")
+                return True
+                
         except Exception as e:
             logger.error(f"Error printing PDF: {e}")
             return False

@@ -1,0 +1,48 @@
+2025-06-23 18:37:33,697 - receptionist - INFO - Starting Receptionist Application
+2025-06-23 18:37:33,698 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-23 18:37:35,109 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-23 18:37:35,378 - receptionist.main_window - INFO - Updated stats bar
+2025-06-23 18:37:40,072 - receptionist.print_handler - ERROR - Error generating PDF: expected token 'end of print statement', got ':'
+2025-06-23 18:37:40,074 - receptionist.print_handler - ERROR - Error in HTML fallback: expected token 'end of print statement', got ':'
+2025-06-23 18:37:40,075 - receptionist.print_handler - ERROR - Error printing reception slip: expected token 'end of print statement', got ':'
+2025-06-23 18:37:40,077 - receptionist.print_handler - ERROR - Error in emergency HTML fallback: expected token 'end of print statement', got ':'
+2025-06-23 18:37:58,741 - receptionist.main_window - INFO - Updated stats bar
+2025-06-23 18:37:58,903 - receptionist.main_window - INFO - Updated stats bar
+2025-06-23 18:37:59,085 - receptionist.main_window - INFO - Updated stats bar
+2025-06-23 18:37:59,281 - receptionist.main_window - INFO - Updated stats bar
+2025-06-23 18:37:59,526 - receptionist.main_window - INFO - Updated stats bar
+2025-06-23 18:38:22,320 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-23
+2025-06-23 18:38:30,573 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-23
+2025-06-23 18:39:17,611 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-23
+2025-06-23 18:39:18,665 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-23
+2025-06-23 18:39:24,350 - receptionist.main_window - INFO - Updated stats bar
+2025-06-23 18:39:24,521 - receptionist.main_window - INFO - Updated stats bar
+2025-06-23 18:39:24,692 - receptionist.main_window - INFO - Updated stats bar
+2025-06-23 18:39:24,906 - receptionist.main_window - INFO - Updated stats bar
+2025-06-23 18:39:27,792 - receptionist - INFO - Receptionist Application shutting down
+2025-06-23 18:39:37,804 - receptionist - INFO - Starting Receptionist Application
+2025-06-23 18:39:37,805 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-23 18:39:38,601 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-23 18:39:38,757 - receptionist.main_window - INFO - Updated stats bar
+2025-06-23 18:39:43,752 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-23
+2025-06-23 18:39:54,966 - receptionist.patient_form - INFO - Set next token number to 1 for date 2025-06-23
+2025-06-23 18:40:02,668 - receptionist - INFO - Receptionist Application shutting down
+2025-06-23 18:40:22,568 - receptionist - INFO - Starting Receptionist Application
+2025-06-23 18:40:22,569 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-23 18:40:23,117 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-23 18:40:23,253 - receptionist.main_window - INFO - Updated stats bar
+2025-06-23 18:40:27,893 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmpxzrr3rve.html (PDF fallback)
+2025-06-23 18:40:28,299 - receptionist.print_handler - INFO - Opened file for printing: C:\Users\heyyt\AppData\Local\Temp\tmpxzrr3rve.html
+2025-06-23 22:26:15,534 - receptionist - INFO - Starting Receptionist Application
+2025-06-23 22:26:15,535 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-23 22:26:16,165 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-23 22:26:16,332 - receptionist.main_window - INFO - Updated stats bar
+2025-06-23 22:26:25,484 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmp1yle5g4v.html (PDF fallback)
+2025-06-23 22:26:25,715 - receptionist.print_handler - INFO - Opened file for printing: C:\Users\heyyt\AppData\Local\Temp\tmp1yle5g4v.html
+2025-06-23 22:37:28,761 - receptionist - INFO - Starting Receptionist Application
+2025-06-23 22:37:28,762 - receptionist.settings - INFO - Settings loaded from E:\$- Projects\Receprionist\src\config\settings.json
+2025-06-23 22:37:29,289 - receptionist.print_handler - WARNING - wkhtmltopdf not found. Falling back to HTML output.
+2025-06-23 22:37:29,434 - receptionist.main_window - INFO - Updated stats bar
+2025-06-23 22:37:35,028 - receptionist.print_handler - INFO - Generated HTML at C:\Users\heyyt\AppData\Local\Temp\tmpn288rzj2.html (PDF fallback)
+2025-06-23 22:37:35,237 - receptionist.print_handler - INFO - Opened HTML file for printing: C:\Users\heyyt\AppData\Local\Temp\tmpn288rzj2.html
+2025-06-23 22:37:44,129 - receptionist - INFO - Receptionist Application shutting down
