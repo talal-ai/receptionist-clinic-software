@@ -20,7 +20,7 @@ class Settings:
     
     DEFAULT_SETTINGS = {
         "app_name": "Clinic Receptionist",
-        "company_name": "MUKARRAM Faiz Clinic",
+        "company_name": "Dr. Muhammad Sajid Sohail",
         "data_path": "./data",
         "excel_file": "patients.xlsx",
         "backup_interval_days": 7,
@@ -29,10 +29,15 @@ class Settings:
         "time_format": "%H:%M",
         "receipt_template": "default_template.html",
         "printer_name": "",  # Default printer
-        "logo_path": "./src/resources/logo.png",
+        "logo_path": "",
         "appointment_duration_mins": 30,
-        "default_doctor": "",
-        "doctors": [],
+        "default_doctor": "Dr. Muhammad Sajid Sohail",
+        "doctors": ["Dr. Muhammad Sajid Sohail"],
+        "doctor_qualifications": "Consultant Physician\nMBBS (K.E), FCPS (Medicine)",
+        "doctor_phones": [
+            "0300-5809938",
+            "0347-9809938"
+        ],
         "theme": "default"
     }
     

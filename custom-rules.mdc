@@ -1,0 +1,67 @@
+---
+description: These rules you have to follow when coding please
+globs:
+alwaysApply: true
+---
+# Cursor AI Coding Rules – Professional Standard
+
+Please follow these rules strictly when writing code:
+
+1. **Work in Small, Clear Chunks**
+   - Break big features into small parts.
+   - Complete and test each part before moving on.
+
+2. **Use Descriptive Names**
+   - Use clear, consistent naming for all variables, functions, and components.
+   - Examples:
+     - Good: `fetchUserData`, `validateEmailInput`
+     - Bad: `getData`, `checkStuff`
+
+3. **Keep Function Names Consistent Across Files**
+   - If a function is reused in multiple files, use the **same name** everywhere.
+   - Avoid using aliases or alternate names.
+
+4. **Add Helpful Comments**
+   - Write comments that explain **what** the code does and **why**, not just how.
+   - This improves both AI understanding and team collaboration.
+
+5. **Avoid Over-Engineering**
+   - Build only what is needed. Don’t create complex abstractions unless required.
+   - Focus on readability, simplicity, and maintainability.
+
+6. **Avoid Dummy or Mock Code**
+   - Do not generate placeholder logic like `mockFunction()` or `tempVar`.
+   - Use realistic structures and clearly comment unfinished areas:
+     - Example: `// TODO: connect to real API`
+
+7. **Fix All Linter and Syntax Errors**
+   - Code must be clean, follow linting rules, and be error-free.
+   - Use Prettier or ESLint formatting automatically.
+
+8. **Use Realistic Prompts**
+   - Only generate code when a full and proper context is provided (types, variables, goals).
+
+9. **Use Type Definitions Where Applicable**
+   - For TypeScript or structured data, define interfaces or types first.
+   - Helps guide correct and safe code generation.
+
+10. **Only One Function per Prompt**
+    - Avoid generating multiple unrelated things in one go.
+    - Ask for one component or function at a time.
+
+11. **Use Meaningful Default Values**
+    - Example: Prefer `limit = 10` over `limit = 9999` or `undefined`.
+
+12. **Do Not Leave Unused Code**
+    - Remove dead code or clearly comment it as experimental.
+
+13. **Write Clean, Readable, Modular Code**
+    - Prefer reusable functions, clean imports, and organized folders.
+    - Follow single-responsibility principle.
+
+14. **Ensure Comments and Function Names Match Behavior**
+    - Keep everything synchronized for clarity.
+
+15. **No Hardcoded Secrets or Keys**
+    - Always use environment variables or placeholders like `process.env.API_KEY`.
+

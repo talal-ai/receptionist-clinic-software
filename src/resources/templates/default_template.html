@@ -2,167 +2,121 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>{{ clinic_name }} - Reception Slip</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Reception Slip</title>
     <style>
         @page {
             size: A5;
-            margin: 10mm;
-        }
-        * {
-            font-family: 'Poppins', sans-serif;
+            margin: 5mm;
         }
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            font-size: 12pt;
-            color: #333;
-            background-color: #f9f9f9;
-        }
-        .container {
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            border-radius: 8px;
+            font-size: 10pt;
+            color: #000;
+            line-height: 1.2;
         }
         .header {
-            margin-bottom: 20px;
-            border-bottom: 2px solid #0066cc;
-            padding-bottom: 15px;
             text-align: center;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
         }
         .header h1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 20pt;
-            color: #0066cc;
-            margin: 10px 0;
-            font-weight: 600;
+            font-size: 14pt;
+            color: #000;
+            margin: 0 0 3px 0;
+            font-weight: bold;
         }
         .qualifications {
-            font-family: 'Poppins', sans-serif;
-            font-size: 12pt;
-            color: #444;
-            margin: 5px 0;
-            font-weight: 500;
-            line-height: 1.4;
+            font-size: 9pt;
+            color: #000;
+            margin: 2px 0;
+            font-weight: normal;
         }
         .contact-info {
-            font-family: 'Poppins', sans-serif;
-            font-size: 11pt;
-            color: #444;
-            margin: 8px 0;
-            line-height: 1.4;
+            font-size: 8pt;
+            color: #000;
+            margin: 2px 0;
         }
         .phone-numbers {
-            font-size: 10pt;
-            margin-top: 1px;
-            color: #555;
-        }
-        .header .logo {
-            max-width: 180px;
-            max-height: 70px;
-            margin-bottom: 10px;
-        }
-        .content {
-            margin: 20px 0;
+            font-size: 8pt;
+            margin: 1px 0;
         }
         .patient-info {
-            margin-bottom: 20px;
-            background-color: #f5f9ff;
-            border-radius: 6px;
-            padding: 15px;
-            font-family: 'Poppins', sans-serif;
+            margin: 5px 0;
         }
         table {
             width: 100%;
             border-collapse: collapse;
-            font-family: 'Poppins', sans-serif;
         }
         table td {
-            padding: 8px 5px;
-            font-family: 'Poppins', sans-serif;
+            padding: 2px 3px;
+            font-size: 9pt;
+            border-bottom: 1px solid #eee;
         }
         .label {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 500;
-            width: 40%;
-            color: #444;
+            font-weight: bold;
+            width: 35%;
+            color: #000;
         }
-        .footer {
-            margin-top: 25px;
-            text-align: center;
-            font-family: 'Poppins', sans-serif;
-            font-size: 10pt;
-            color: #777;
-            border-top: 1px solid #eee;
-            padding-top: 15px;
+        .value {
+            color: #000;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Dr. Muhammad Sajid Sohail</h1>
-            <div class="qualifications">
-                Consultant Physician<br>
-                MBBS (K.E), FCPS (Medicine)
-            </div>
-            <div class="contact-info">
-                <div style="margin-top: 6px;" class="phone-numbers">
-                    Cell: 0300-5809938<br>
-                    Cell: 0347-9809938
-                </div>
+    <div class="header">
+        <h1>Dr. Muhammad Sajid Sohail</h1>
+        <div class="qualifications">
+            Consultant Physician<br>
+            MBBS (K.E), FCPS (Medicine)
+        </div>
+        <div class="contact-info">
+            <div class="phone-numbers">
+                Cell: 0300-5809938<br>
+                Cell: 0347-9809938
             </div>
         </div>
-        
-        <div class="content">
-            <div class="patient-info">
-                <table>
-                    <tr>
-                        <td class="label">Token Number:</td>
-                        <td style="font-family: 'Poppins', sans-serif;">{{ token_number }}</td>
-                    </tr>
-                    <tr>
-                        <td class="label">Date:</td>
-                        <td style="font-family: 'Poppins', sans-serif;">{{ appointment_date }}</td>
-                    </tr>
-                    <tr>
-                        <td class="label">Patient Name:</td>
-                        <td style="font-family: 'Poppins', sans-serif;">{{ patient_name }}</td>
-                    </tr>
-                    <tr>
-                        <td class="label">Status:</td>
-                        <td style="font-family: 'Poppins', sans-serif;">{{ status }}</td>
-                    </tr>
-                    <tr>
-                        <td class="label">Time Arrival:</td>
-                        <td style="font-family: 'Poppins', sans-serif;">{{ arrival_time }}</td>
-                    </tr>
-                    <tr>
-                        <td class="label">Checkup Time:</td>
-                        <td style="font-family: 'Poppins', sans-serif;">{{ appointment_time }}</td>
-                    </tr>
-                    <tr>
-                        <td class="label">Fees:</td>
-                        <td style="font-family: 'Poppins', sans-serif;">{% if fees %}PKR {{ fees }}{% else %}Not specified{% endif %}</td>
-                    </tr>
-                    {% if remarks and remarks.strip() %}
-                    <tr>
-                        <td class="label">Remarks:</td>
-                        <td style="font-family: 'Poppins', sans-serif;">{{ remarks }}</td>
-                    </tr>
-                    {% endif %}
-                </table>
-            </div>
-        </div>
-        
-        <div class="footer">
-            <p>Generated on {{ generated_date }} at {{ generated_time }}</p>
-            <p>Thank you for trusting Dr. Sajid Sohail</p>
-        </div>
+    </div>
+    
+    <div class="patient-info">
+        <table>
+            <tr>
+                <td class="label">Token Number:</td>
+                <td class="value">{{ token_number }}</td>
+            </tr>
+            <tr>
+                <td class="label">Date:</td>
+                <td class="value">{{ appointment_date }}</td>
+            </tr>
+            <tr>
+                <td class="label">Patient Name:</td>
+                <td class="value">{{ patient_name }}</td>
+            </tr>
+            <tr>
+                <td class="label">Status:</td>
+                <td class="value">{{ status }}</td>
+            </tr>
+            <tr>
+                <td class="label">Time Arrival:</td>
+                <td class="value">{{ arrival_time }}</td>
+            </tr>
+            <tr>
+                <td class="label">Checkup Time:</td>
+                <td class="value">{{ appointment_time }}</td>
+            </tr>
+            <tr>
+                <td class="label">Fees:</td>
+                <td class="value">{% if fees %}PKR {{ fees }}{% else %}Not specified{% endif %}</td>
+            </tr>
+            {% if remarks and remarks.strip() %}
+            <tr>
+                <td class="label">Remarks:</td>
+                <td class="value">{{ remarks }}</td>
+            </tr>
+            {% endif %}
+        </table>
     </div>
 </body>
 </html>

@@ -1,6 +1,6 @@
 {
     "app_name": "Clinic Receptionist",
-    "company_name": "DR. SAJJAD SOHAIL CLINIC",
+    "company_name": "Dr. Muhammad Sajid Sohail",
     "data_path": "E:\\$- Projects\\Receprionist\\data",
     "excel_file": "patients.xlsx",
     "backup_interval_days": 7,
@@ -11,16 +11,21 @@
     "printer_name": "",
     "logo_path": "",
     "appointment_duration_mins": 30,
-    "default_doctor": "",
+    "default_doctor": "Dr. Muhammad Sajid Sohail",
     "doctors": [
-        "Dr. Sajjid\u00a0Sohail (MBBS)"
+        "Dr. Muhammad Sajid Sohail"
+    ],
+    "doctor_qualifications": "Consultant Physician\nMBBS (K.E), FCPS (Medicine)",
+    "doctor_phones": [
+        "0300-5809938",
+        "0347-9809938"
     ],
     "theme": "default",
-    "clinic_address": "LAYYAH",
-    "clinic_phone": "03101628543",
+    "clinic_address": "",
+    "clinic_phone": "",
     "printer_settings": {
         "use_thermal_printer": true,
-        "printer_name": "BC-98AC",
+        "printer_name": "BC-88AC",
         "vendor_id": "0x0483",
         "product_id": "0x5740",
         "interface": 0

@@ -1,4 +1,4 @@
-                                                                                                                                                                                                                                                                                                                                                                                                                                            #!/usr/bin/env python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Patient Form for the Receptionist Application
@@ -523,6 +523,13 @@ class PatientForm:
         }
         
         return form_data
+    
+    def get_patient_data(self):
+        """
+        Get the current patient data from the form fields.
+        This is an alias for get_form_data to be used by external callers.
+        """
+        return self.get_form_data()
     
     def validate_form(self):
         """

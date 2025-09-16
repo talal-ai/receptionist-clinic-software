@@ -220,6 +220,10 @@ class MainWindow:
         # Print button
         print_btn = ttk.Button(toolbar_frame, text="Print Current", command=self._on_print_current)
         print_btn.pack(side=tk.LEFT, padx=2)
+        
+        # Preview Thermal button
+        preview_thermal_btn = ttk.Button(toolbar_frame, text="Preview Thermal", command=self._on_preview_thermal)
+        preview_thermal_btn.pack(side=tk.LEFT, padx=2)
     
     def _create_stats_bar(self):
         """Create a compact stats bar showing daily, weekly, and monthly statistics"""
@@ -520,6 +524,19 @@ class MainWindow:
         
         # Close the window
         self.root.destroy()
+    
+    def _on_preview_thermal(self):
+        """Handle preview thermal receipt command"""
+        # Get the current patient data from the form
+        patient_data = self.patient_form.get_patient_data()
+        if not patient_data.get('first_name'):
+            messagebox.showwarning("No Patient Loaded", "Please load or enter patient details before previewing.")
+            return
+        
+        # Use the print handler to generate and show the preview
+        from utils.print_handler import PrintHandler
+        print_handler = PrintHandler(self.settings)
+        print_handler.preview_thermal_receipt(patient_data)
     
     def run(self):
         """Run the application"""
